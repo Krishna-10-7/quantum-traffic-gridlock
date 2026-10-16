@@ -1,0 +1,56 @@
+learning split_qubit_eta2
+    [split_qubit_eta2] start ramp0.5            -> mean objective 0.37926
+    [split_qubit_eta2] start ramp0.75           -> mean objective 0.37926
+    [split_qubit_eta2] start ramp1.0            -> mean objective 0.37926
+    [split_qubit_eta2] start ramp1.25           -> mean objective 0.38646
+    [split_qubit_eta2] start ramp1.5            -> mean objective 0.37926
+  [split_qubit_eta2] mean objective 0.37926 from ramp0.5 (52s)
+learning single_single_eta2
+    [single_single_eta2] start ramp0.5            -> mean objective 0.43049
+    [single_single_eta2] start ramp0.75           -> mean objective 0.43049
+    [single_single_eta2] start ramp1.0            -> mean objective 0.43049
+    [single_single_eta2] start ramp1.25           -> mean objective 0.43049
+    [single_single_eta2] start ramp1.5            -> mean objective 0.48342
+  [single_single_eta2] mean objective 0.43049 from ramp0.5 (41s)
+learning split_qubit_eta1
+    [split_qubit_eta1] start ramp0.5            -> mean objective 0.21638
+    [split_qubit_eta1] start ramp0.75           -> mean objective 0.21638
+    [split_qubit_eta1] start ramp1.0            -> mean objective 0.21638
+    [split_qubit_eta1] start ramp1.25           -> mean objective 0.21968
+    [split_qubit_eta1] start ramp1.5            -> mean objective 0.21968
+    [split_qubit_eta1] start split_qubit_eta2   -> mean objective 0.21638
+  [split_qubit_eta1] mean objective 0.21638 from ramp0.75 (78s)
+learning split_qubit_eta3
+    [split_qubit_eta3] start ramp0.5            -> mean objective 0.51067
+    [split_qubit_eta3] start ramp0.75           -> mean objective 0.51067
+    [split_qubit_eta3] start ramp1.0            -> mean objective 0.51067
+    [split_qubit_eta3] start ramp1.25           -> mean objective 0.52082
+    [split_qubit_eta3] start ramp1.5            -> mean objective 0.51067
+    [split_qubit_eta3] start split_qubit_eta2   -> mean objective 0.51067
+  [split_qubit_eta3] mean objective 0.51067 from ramp0.5 (62s)
+learning split_qubit_eta4
+    [split_qubit_eta4] start ramp0.5            -> mean objective 0.62051
+    [split_qubit_eta4] start ramp0.75           -> mean objective 0.62051
+    [split_qubit_eta4] start ramp1.0            -> mean objective 0.62051
+    [split_qubit_eta4] start ramp1.25           -> mean objective 0.63300
+    [split_qubit_eta4] start ramp1.5            -> mean objective 0.62051
+    [split_qubit_eta4] start split_qubit_eta2   -> mean objective 0.62051
+    [split_qubit_eta4] start split_qubit_eta3   -> mean objective 0.62051
+  [split_qubit_eta4] mean objective 0.62051 from ramp0.5 (66s)
+learning field_qubit_eta2
+    [field_qubit_eta2] start ramp0.5            -> mean objective 0.36247
+    [field_qubit_eta2] start ramp0.75           -> mean objective 0.36247
+    [field_qubit_eta2] start ramp1.0            -> mean objective 0.36745
+    [field_qubit_eta2] start ramp1.25           -> mean objective 0.37347
+    [field_qubit_eta2] start ramp1.5            -> mean objective 0.37298
+    [field_qubit_eta2] start split_qubit_eta2   -> mean objective 0.36247
+  [field_qubit_eta2] mean objective 0.36247 from ramp0.5 (465s)
+learning field_qubit_eta3
+    [field_qubit_eta3] start ramp0.5            -> mean objective 0.48890
+    [field_qubit_eta3] start ramp0.75           -> mean objective 0.48890
+    [field_qubit_eta3] start ramp1.0            -> mean objective 0.49625
+    [field_qubit_eta3] start ramp1.25           -> mean objective 0.50345
+    [field_qubit_eta3] start ramp1.5            -> mean objective 0.50359
+    [field_qubit_eta3] start split_qubit_eta3   -> mean objective 0.48890
+    [field_qubit_eta3] start field_qubit_eta2   -> mean objective 0.48890
+  [field_qubit_eta3] mean objective 0.48890 from ramp0.75 (554s)

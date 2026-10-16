@@ -1,0 +1,172 @@
+{
+ "scorer": {
+  "max_abs_diff_independent_evaluator": 0.0,
+  "max_abs_diff_official_reduction_nonempty_C": 0.0
+ },
+ "scenarios": {
+  "scenario_files_match_generator": true,
+  "n": 21
+ },
+ "consistency": {
+  "max_diff_report_seed0_vs_ablation_final": 0.0,
+  "n": 21
+ },
+ "budget_objective": [
+  {
+   "scenario": "R3",
+   "cfg": {},
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "R3",
+   "cfg": {
+    "init": "random"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "R3",
+   "cfg": {
+    "cost_mode": "single",
+    "mixer_mode": "single"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "R3",
+   "cfg": {
+    "p": 1
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_0",
+   "cfg": {},
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_0",
+   "cfg": {
+    "init": "random"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_0",
+   "cfg": {
+    "cost_mode": "single",
+    "mixer_mode": "single"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_0",
+   "cfg": {
+    "p": 1
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_1",
+   "cfg": {},
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_1",
+   "cfg": {
+    "init": "random"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_1",
+   "cfg": {
+    "cost_mode": "single",
+    "mixer_mode": "single"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_1",
+   "cfg": {
+    "p": 1
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_2",
+   "cfg": {},
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_2",
+   "cfg": {
+    "init": "random"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_2",
+   "cfg": {
+    "cost_mode": "single",
+    "mixer_mode": "single"
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  },
+  {
+   "scenario": "chain1001_2",
+   "cfg": {
+    "p": 1
+   },
+   "probability_calls_in_train": 300,
+   "len_history": 300,
+   "objective_built_on_qubo_energies": true,
+   "objective_inputs_differ_from_costs": true
+  }
+ ]
+}

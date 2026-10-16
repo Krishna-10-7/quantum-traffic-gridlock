@@ -62,15 +62,12 @@ def noisy_probs(qc, e2):
 
 
 def trained_circuit(s, p, tau=0.0):
-    cfg = run.DEFAULTS
+    cfg = {**run.DEFAULTS, 'p': p}
     off, Q = qb.build_qubo(s, measure=cfg['measure'], kappa=cfg['kappa'])
     if tau > 0:
         off_diag = np.triu(np.abs(Q), 1)
         Q = np.where(np.triu(np.ones_like(Q), 1).astype(bool) & (off_diag < tau * off_diag.max()), 0.0, Q)
-    h, J, _ = qb.qubo_to_ising(Q, off)
-    e = qb.energies(Q, off)
-    a, x, _ = qaoa.train(h, J, e, p=p, cost_mode=cfg['cost_mode'], mixer_mode=cfg['mixer_mode'], kind=cfg['kind'],
-                         eta=cfg['eta'], stage1_evals=cfg['stage1_evals'], ramp_dts=cfg['ramp_dts'])
+    a, x, _, _ = run.train_qubo(off, Q, cfg, seed=0)
     return cq.build_circuit(a, x, measure=False)
 
 

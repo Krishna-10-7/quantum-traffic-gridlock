@@ -20,14 +20,36 @@ import numpy as np  # noqa: E402
 import baselines as bl  # noqa: E402
 import circuit as cq  # noqa: E402
 import qaoa  # noqa: E402
+import qaoa_nft  # noqa: E402
 import qubo as qb  # noqa: E402
 import traffic_model as tm  # noqa: E402
 
 SHOTS = 4096
 MAX_EVALS = 300
-DEFAULTS = dict(p=4, cost_mode='split', mixer_mode='qubit', kind='gibbs', eta=2.0,
-                measure='adaptive', kappa=1.0, stage1_evals=40, ramp_dts=(0.75, 1.0, 1.25),
-                init='ramp', max_evals=MAX_EVALS)
+DEFAULTS = dict(p=4, cost_mode='field', mixer_mode='qubit', kind='gibbs', eta=2.0,
+                measure='webster', kappa=1.0, stage1_evals=13, ramp_dts=(0.75, 1.0, 1.25),
+                init='ramp', max_evals=MAX_EVALS, trainer='nft', gen_evals=16)
+
+
+def train_qubo(offset, Q, cfg, seed):
+    """Ising conversion + budgeted QAOA training for a given QUBO. Returns (ansatz, params, history, energies).
+
+    cfg['no_couplings'] (ablation) drops the ZZ terms from the circuit's cost layer; the training
+    objective still uses the full QUBO energies.
+    """
+    h, J, _ = qb.qubo_to_ising(Q, offset)
+    energies = qb.energies(Q, offset)
+    if cfg.get('no_couplings'):
+        J = np.zeros_like(J)
+    train_kw = dict(p=cfg['p'], cost_mode=cfg['cost_mode'], mixer_mode=cfg['mixer_mode'],
+                    kind=cfg['kind'], eta=cfg['eta'], max_evals=min(cfg['max_evals'], MAX_EVALS),
+                    ramp_dts=cfg['ramp_dts'], stage1_evals=cfg['stage1_evals'], init=cfg['init'], init_seed=seed)
+    if cfg['trainer'] == 'nft':      # exact sequential minimal optimisation (NFT/Rotosolve), qaoa_nft.py
+        ansatz, params, history = qaoa_nft.train(h, J, energies, gen_evals=cfg['gen_evals'], **train_kw)
+    else:                            # COBYLA-only trainer (ablation; the previous submission)
+        ansatz, params, history = qaoa.train(h, J, energies, **train_kw)
+    assert len(history) <= MAX_EVALS
+    return ansatz, params, history, energies
 
 
 def solve(s, seed, cfg=None, shots=SHOTS):
@@ -36,14 +58,8 @@ def solve(s, seed, cfg=None, shots=SHOTS):
     t0 = time.time()
     offset, Q = qb.build_qubo(s, measure=cfg['measure'], kappa=cfg['kappa'])
     h, J, const = qb.qubo_to_ising(Q, offset)
-    energies = qb.energies(Q, offset)
     t_qubo = time.time() - t0
-
-    ansatz, params, history = qaoa.train(
-        h, J, energies, p=cfg['p'], cost_mode=cfg['cost_mode'], mixer_mode=cfg['mixer_mode'],
-        kind=cfg['kind'], eta=cfg['eta'], max_evals=min(cfg['max_evals'], MAX_EVALS), ramp_dts=cfg['ramp_dts'],
-        stage1_evals=cfg['stage1_evals'], init=cfg['init'], init_seed=seed)
-    assert len(history) <= MAX_EVALS
+    ansatz, params, history, energies = train_qubo(offset, Q, cfg, seed)
     t_train = time.time() - t0 - t_qubo
 
     qc = cq.build_circuit(ansatz, params)
@@ -103,8 +119,8 @@ def solve(s, seed, cfg=None, shots=SHOTS):
         },
     }
     qubo_json = {
-        'description': ('E(x) = offset + sum_{i<=j} Q[i][j] x_i x_j, x in {0,1}^8. Weighted-L2 quadratic '
-                        'projection of the exact per-approach queue cost plus the exact switching term; see REPORT.md.'),
+        'description': ('E(x) = offset + sum_{i<=j} Q[i][j] x_i x_j, x in {0,1}^8. Per-approach second-order '
+                        'expansion of the exact queue cost plus the exact switching term; see REPORT.md section 2.'),
         'n_variables': 8, 'auxiliary_variables': [],
         'variable_to_schedule_bit': {str(i): f"{'AB'[i // 4]}_slot{i % 4 + 1}" for i in range(8)},
         'variable_to_qubit': {str(i): cq.qubit_of(i) for i in range(8)},
@@ -113,7 +129,11 @@ def solve(s, seed, cfg=None, shots=SHOTS):
         'Q_upper_triangular': Q.tolist(),
         'ising': {'convention': 'x_i = (1 - z_i)/2; E = const + sum h_i z_i + sum_{i<j} J_ij z_i z_j',
                   'h': h.tolist(), 'J_upper': J.tolist(), 'const': const},
-        'construction': {'measure': cfg['measure'], 'kappa': cfg['kappa']},
+        'construction': {'measure': cfg['measure'],
+                         'rule': ('second-order expansion of each approach exact queue cost at the Webster '
+                                  'equal-saturation split (analytic_qubo.py); 176 single-approach recursions, '
+                                  'no joint-schedule cost table' if cfg['measure'] == 'webster' else
+                                  'weighted-L2 quadratic projection of the full cost table (qubo.py)')},
     }
     training = {'history': history, 'params': params.tolist(),
                 'layer_angles': [{'field_gamma': gf.tolist(), 'coupling_gamma': float(gj), 'mixer_beta': b.tolist()}
@@ -128,7 +148,7 @@ def main():
     ap.add_argument('--seed', type=int, required=True)
     ap.add_argument('--out', required=True)
     ap.add_argument('--p', type=int, default=DEFAULTS['p'], choices=[1, 2, 3, 4])
-    ap.add_argument('--measure', default=DEFAULTS['measure'], choices=['adaptive', 'uniform'])
+    ap.add_argument('--measure', default=DEFAULTS['measure'], choices=['webster', 'adaptive', 'uniform'])
     a = ap.parse_args()
     s = tm.load_scenario(a.scenario)
     res = solve(s, a.seed, {'p': a.p, 'measure': a.measure})

@@ -1,0 +1,13 @@
+split cobyla rho2=0.03                     lift 0.8737 (min 0.686)  enr 15.87 (min 7.08)  P(opt) 0.226  f 0.2692  evals<=299  drift 0.0e+00  3.43s
+split cobyla rho2=0.15                     lift 0.8948 (min 0.701)  enr 16.75 (min 7.61)  P(opt) 0.271  f 0.2181  evals<=299  drift 0.0e+00  2.84s
+split cobyla rho2=0.3                      lift 0.8917 (min 0.724)  enr 16.67 (min 7.37)  P(opt) 0.264  f 0.2280  evals<=299  drift 0.0e+00  2.87s
+split cobyqa rho2=0.075                    lift 0.9129 (min 0.805)  enr 17.62 (min 11.50)  P(opt) 0.334  f 0.1718  evals<=299  drift 0.0e+00  3.76s
+split cobyqa rho2=0.3                      lift 0.9098 (min 0.810)  enr 17.47 (min 10.48)  P(opt) 0.320  f 0.1802  evals<=299  drift 0.0e+00  4.03s
+split powell rho2=0.1                      lift 0.8054 (min 0.690)  enr 12.91 (min 5.90)  P(opt) 0.133  f 0.4272  evals<=298  drift 0.0e+00  1.01s
+split nelder-mead rho2=0.075               lift 0.7699 (min 0.621)  enr 10.86 (min 4.81)  P(opt) 0.082  f 0.5371  evals<=299  drift 0.0e+00  1.17s
+split cobyla, stage1 layerwise INTERP 10/20/30/40 lift 0.9088 (min 0.773)  enr 17.34 (min 10.27)  P(opt) 0.299  f 0.1904  evals<=299  drift 0.0e+00  3.14s
+split cobyla, stage1 3 restarts            lift 0.8781 (min 0.714)  enr 16.05 (min 6.34)  P(opt) 0.230  f 0.2564  evals<=299  drift 0.0e+00  3.15s
+split cobyla, stage1_evals=80              lift 0.8842 (min 0.704)  enr 16.31 (min 7.77)  P(opt) 0.251  f 0.2441  evals<=299  drift 0.0e+00  3.06s
+split cobyla, stage1_evals=20              lift 0.8936 (min 0.720)  enr 16.66 (min 7.78)  P(opt) 0.262  f 0.2204  evals<=299  drift 0.0e+00  3.63s
+split cobyla, mid (single,qubit) 80 evals  lift 0.8900 (min 0.712)  enr 16.55 (min 7.57)  P(opt) 0.261  f 0.2307  evals<=299  drift 0.0e+00  2.59s
+split cobyla eta 1 -> 2                    lift 0.8887 (min 0.714)  enr 16.65 (min 7.70)  P(opt) 0.250  f 0.2328  evals<=299  drift 0.0e+00  2.95s

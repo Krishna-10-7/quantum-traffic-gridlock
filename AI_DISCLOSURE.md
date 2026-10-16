@@ -8,8 +8,13 @@
   Gibbs objective, linear-ramp initialisation, two-stage budgeted COBYLA).
 - Wrote the code in this repository (`run.py`, `traffic_model.py`, `qubo.py`, `qaoa.py`, `circuit.py`, `baselines.py`,
   `experiments/`, `tests/`) and drafted `README.md` and `REPORT.md`.
-- Ran the exploratory sweeps used to choose hyper-parameters. Hyper-parameters were selected on randomly generated
-  scenarios (generator seeds 1, 7, 11) and then **frozen**. The reported generalization (seed 2026) and ablation
+- In a second round, ran five parallel research sub-agents (analytic QUBO, optimiser and ansatz, transfer
+  initialisation, three-intersection chain, shot-based training and hardware) under the same rules. Each wrote only
+  under `lab/<track>/` and reported against a common validation set (R + seed 555). Two tracks were also re-run by
+  independent reviewer agents. The adopted changes (`analytic_qubo.py`, `qaoa_nft.py`) were then re-checked by the
+  repository tests and re-benchmarked on held-out sets.
+- Ran the exploratory sweeps used to choose hyper-parameters. They were selected on randomly generated
+  scenarios (generator seeds 1, 7, 11, 31) and then **frozen**. The reported generalization (seed 2026) and ablation
   (seed 99) sets were not used for selection. Scenario R was never used to tune anything beyond being one point among many.
 
 **How results were independently verified.**

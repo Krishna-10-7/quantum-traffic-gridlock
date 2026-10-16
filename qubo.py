@@ -73,7 +73,12 @@ def energies(Q, offset):
     return offset + np.einsum('si,ij,sj->s', X, Q, X)
 
 
-def build_qubo(s, measure='adaptive', kappa=1.0, iters=8):
+def build_qubo(s, measure='webster', kappa=1.0, iters=8):
+    """measure: 'webster' (default, closed-form local rule in analytic_qubo.py, no 256-schedule table),
+    'adaptive' / 'uniform' (weighted-L2 projection of the full cost table; ablations / reference)."""
+    if measure in ('webster', 'red', 'local_gibbs'):
+        import analytic_qubo
+        return analytic_qubo.build_analytic_qubo(s, rule=measure)
     tables = approach_tables(s)
     total = sum(tables.values())
     w = np.ones(256)

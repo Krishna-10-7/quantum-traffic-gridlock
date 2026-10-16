@@ -1,0 +1,11 @@
+learning split_qubit_eta2
+  [split_qubit_eta2] per-instance done 870s; mean f: current-pipeline 0.21163, per-instance optimum 0.00425, median_opt 1.99363
+    start ramp0.5        -> mean objective 0.37926
+    start ramp0.75       -> mean objective 0.37926
+    start ramp1.0        -> mean objective 0.37926
+    start ramp1.25       -> mean objective 0.38646
+    start ramp1.5        -> mean objective 0.37926
+    start median_opt     -> mean objective 0.46510
+    start median_cur     -> mean objective 0.38646
+  [split_qubit_eta2] mean f: {"current_pipeline": 0.2116266036804508, "per_instance_optimum": 0.004253978384612992, "theta_median_optima": 1.993632862409071, "theta_median_current": 0.7212094597602642, "theta_mean_objective": 0.3792595531641065}  (937s)
+learning single_single_eta2

@@ -1,0 +1,34 @@
+N=None {}  lift 0.883 (min 0.730, p10 0.780)  enr 16.14  21s
+N=256 {'method': 'cobyla'}  lift 0.690 (min 0.525, p10 0.595)  enr 8.05  14s
+N=256 {'method': 'cobyla', 'rhobeg': 0.3, 'rho2': 0.15}  lift 0.708 (min 0.578, p10 0.602)  enr 8.67  15s
+N=256 {'method': 'cobyla', 'rhobeg': 0.3, 'rho2': 0.3}  lift 0.722 (min 0.569, p10 0.608)  enr 9.57  15s
+C:\Users\hp\AppData\Roaming\Python\Python312\site-packages\scipy\_external\pyprima\common\preproc.py:68: UserWarning: COBYLA: Invalid MAXFUN; it should be at least num_vars + 2; it is set to 10
+  warn(f'{solver}: Invalid MAXFUN; it should be at least {min_maxfun_str}; it is set to {maxfun}')
+C:\Users\hp\AppData\Roaming\Python\Python312\site-packages\scipy\_external\pyprima\common\preproc.py:68: UserWarning: COBYLA: Invalid MAXFUN; it should be at least num_vars + 2; it is set to 10
+  warn(f'{solver}: Invalid MAXFUN; it should be at least {min_maxfun_str}; it is set to {maxfun}')
+C:\Users\hp\AppData\Roaming\Python\Python312\site-packages\scipy\_external\pyprima\common\preproc.py:202: UserWarning: COBYLA: Invalid RHOEND; it should be a positive number and RHOEND <= RHOBEG; it is set to 1e-06
+  warn(f'{solver}: Invalid RHOEND; it should be a positive number and RHOEND <= RHOBEG; it is set to {rhoend}')
+C:\Users\hp\AppData\Roaming\Python\Python312\site-packages\scipy\_external\pyprima\common\preproc.py:202: UserWarning: COBYLA: Invalid RHOEND; it should be a positive number and RHOEND <= RHOBEG; it is set to 1e-06
+  warn(f'{solver}: Invalid RHOEND; it should be a positive number and RHOEND <= RHOBEG; it is set to {rhoend}')
+C:\Users\hp\AppData\Roaming\Python\Python312\site-packages\scipy\_external\pyprima\common\preproc.py:68: UserWarning: COBYLA: Invalid MAXFUN; it should be at least num_vars + 2; it is set to 42
+  warn(f'{solver}: Invalid MAXFUN; it should be at least {min_maxfun_str}; it is set to {maxfun}')
+C:\Users\hp\AppData\Roaming\Python\Python312\site-packages\scipy\_external\pyprima\common\preproc.py:68: UserWarning: COBYLA: Invalid MAXFUN; it should be at least num_vars + 2; it is set to 42
+  warn(f'{solver}: Invalid MAXFUN; it should be at least {min_maxfun_str}; it is set to {maxfun}')
+N=256 {'method': 'cobyla', 'tol': 0.02}  lift 0.693 (min 0.536, p10 0.582)  enr 8.27  13s
+N=256 {'method': 'cobyla', 'rhobeg': 0.3, 'rho2': 0.15, 'tol': 0.02}  lift 0.716 (min 0.566, p10 0.606)  enr 9.13  15s
+N=256 {'method': 'cobyla', 'rhobeg': 0.3, 'rho2': 0.15, 'tol': 0.05}  lift 0.716 (min 0.557, p10 0.602)  enr 9.12  13s
+N=256 {'method': 'cobyla', 'stage1_evals': 100}  lift 0.690 (min 0.518, p10 0.597)  enr 8.03  16s
+N=256 {'method': 'cobyla', 'stage1_evals': 300}  lift 0.691 (min 0.539, p10 0.600)  enr 8.12  14s
+N=256 {'method': 'cobyla', 'cost_mode': 'single', 'mixer_mode': 'single', 'rhobeg': 0.3}  lift 0.710 (min 0.575, p10 0.611)  enr 8.91  13s
+C:\Users\hp\AppData\Roaming\Python\Python312\site-packages\scipy\_external\pyprima\common\preproc.py:68: UserWarning: COBYLA: Invalid MAXFUN; it should be at least num_vars + 2; it is set to 14
+  warn(f'{solver}: Invalid MAXFUN; it should be at least {min_maxfun_str}; it is set to {maxfun}')
+N=256 {'method': 'cobyla', 'cost_mode': 'split', 'mixer_mode': 'single'}  lift 0.692 (min 0.528, p10 0.597)  enr 8.15  16s
+N=256 {'method': 'cobyla', 'reeval': 20}  lift 0.689 (min 0.525, p10 0.589)  enr 8.06  16s
+N=256 {'method': 'spsa', 'spsa_a': 0.05, 'spsa_c': 0.1}  lift 0.734 (min 0.597, p10 0.601)  enr 9.54  6s
+N=256 {'method': 'spsa', 'spsa_a': 0.1, 'spsa_c': 0.1}  lift 0.747 (min 0.599, p10 0.621)  enr 9.99  5s
+N=256 {'method': 'spsa', 'spsa_a': 0.2, 'spsa_c': 0.1}  lift 0.767 (min 0.623, p10 0.625)  enr 11.12  7s
+N=256 {'method': 'spsa', 'spsa_a': 0.4, 'spsa_c': 0.1}  lift 0.796 (min 0.615, p10 0.691)  enr 12.40  8s
+N=256 {'method': 'spsa', 'spsa_a': 0.2, 'spsa_c': 0.2}  lift 0.759 (min 0.608, p10 0.678)  enr 10.68  8s
+N=256 {'method': 'spsa', 'spsa_a': 0.2, 'spsa_c': 0.05}  lift 0.751 (min 0.605, p10 0.644)  enr 10.26  8s
+N=256 {'method': 'spsa', 'spsa_a': 0.2, 'spsa_c': 0.1, 'stage1_evals': 100}  lift 0.752 (min 0.591, p10 0.644)  enr 10.45  10s
+N=256 {'method': 'spsa', 'spsa_a': 0.2, 'spsa_c': 0.1, 'reeval': 20}  lift 0.774 (min 0.624, p10 0.643)  enr 11.30  9s

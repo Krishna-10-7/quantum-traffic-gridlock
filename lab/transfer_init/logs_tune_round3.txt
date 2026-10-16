@@ -1,0 +1,7 @@
+transfer only (json split_qubit_eta2)         lift 0.9463 (min 0.852) enr 18.22 (min 9.24) P(opt) 0.437 f 0.1064 evals 300 (96s)
+transfer eta1                                 lift 0.9428 (min 0.844) enr 18.12 (min 9.84) P(opt) 0.399 f 0.0666 evals 300 (113s)
+transfer eta3                                 lift 0.9458 (min 0.836) enr 18.29 (min 10.74) P(opt) 0.456 f 0.1360 evals 300 (104s)
+transfer eta4                                 lift 0.9462 (min 0.843) enr 18.31 (min 11.76) P(opt) 0.468 f 0.1565 evals 300 (99s)
+random init (3 probes, seed 0)                lift 0.8583 (min 0.633) enr 14.87 (min 6.72) P(opt) 0.259 f 0.3059 evals 300 (118s)
+transfer field eta2                           lift 0.9417 (min 0.779) enr 18.09 (min 10.06) P(opt) 0.416 f 0.1150 evals 300 (155s)
+transfer field eta3                           lift 0.9416 (min 0.783) enr 18.10 (min 10.05) P(opt) 0.440 f 0.1472 evals 300 (157s)

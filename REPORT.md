@@ -1,166 +1,158 @@
-# Quantum Traffic Gridlock — traffic-derived QUBO and budgeted multi-angle QAOA
+# Quantum Traffic Gridlock — closed-form traffic QUBO and exactly-trained multi-angle QAOA
 
-*IBM Qiskit Fall Fest 2026 · QC@IITI. All costs below are computed by the official `scorer.py`. Code, outputs and logs are in the repository. Commands to reproduce every number are in `README.md`.*
+*IBM Qiskit Fall Fest 2026 · QC@IITI. All costs below are computed by the official `scorer.py`. Every number comes from scripts in the repo (`README.md` lists the commands). Settings were frozen on tuning scenarios (generator seeds 1, 7, 11, 31) before any reported set was run. The reported sets are VAL = R plus seed 555, held-out = seed 2026, and ablations = seed 99.*
 
 ## 1. Traffic model and variables
 
-There are 8 binary decisions, x = (A₁…A₄, B₁…B₄), with xᵢ = 1 for NS green and 0 for EW green. One bit per intersection-slot
-encodes "exactly one phase is green", so **every bitstring is feasible**. No one-hot penalty, slack or auxiliary variable is
-needed, and the QUBO has 8 variables mapped to 8 qubits. The official cost decomposes exactly
-(verified against the scorer on 1,240 random pairs):
+There are 8 binary decisions, x = (A₁…A₄, B₁…B₄), with xᵢ = 1 for NS green. One bit per intersection-slot natively encodes "exactly one phase is green", so **all 256 bitstrings are feasible**. No one-hot penalty, slack or auxiliary qubit is needed: 8 variables map to 8 qubits.
 
-C(x) = Σ_k D_k(x_{S_k}) + w_sw Σ_{n∈{A,B}} Σ_{t=2..4} (x_{n,t} + x_{n,t−1} − 2x_{n,t}x_{n,t−1}),
+The official cost decomposes exactly (verified against the scorer on 1,240 random pairs):
 
-where D_k = (delay + w_ov·overflow) of approach k ∈ {A-NS, A-EW, B-NS, B-EW}. **Locality** fixes which bits each approach sees:
+C(x) = Σ_k D_k(x_{S_k}) + w_sw Σ_{n,t≥2} (x_{n,t} + x_{n,t−1} − 2x_{n,t}x_{n,t−1})
 
-- the two A approaches see S_k = A bits;
-- the unlinked B approach sees S_k = B bits;
-- the linked B approach sees all 8 bits, because transfers round(f·departures) carry A's decisions into B one slot later.
+Here D_k = delay + w_ov·overflow of approach k, and it follows the Lindley recursion q_t = (q_{t−1} + a_t + τ_t − c·g_t)⁺ with g = x for NS and 1 − x for EW. **Locality** fixes S_k:
 
-Switching is already quadratic and is kept **exactly**.
+- the A approaches see A₁..A₄;
+- the unlinked B approach sees B₁..B₄;
+- the linked B approach sees B₁..B₄ plus A₁..A₃, through platoons τ_{t+1} = ⌊f·d^A_t + ½⌋. A₄'s platoon leaves the model, so every A₄–B coupling is exactly 0.
 
-## 2. QUBO derivation (scenario-independent modelling rule)
+Switching is quadratic and is kept exactly.
 
-**Why a surrogate is necessary.** Each D_k is built from min(queue, capacity) (service) and max(0, queue − storage) (overflow).
-As a pseudo-Boolean function it has a unique multilinear expansion D_k = Σ_S ĉ_S Π_{i∈S} zᵢ with zᵢ = 1 − 2xᵢ. Its degree is
-up to 4 within an intersection and up to 8 for the linked approach (spillback). Reducing all cubic-and-higher monomials
-would need far more than the 8 spare qubits. We therefore approximate each D_k by a quadratic function.
+## 2. QUBO derivation (closed-form, scenario-independent rule)
 
-**Rule.** The QUBO is the weighted-L² projection of the exact traffic cost onto quadratic pseudo-Boolean functions:
+**Pairwise physics.** Let A_t be the cumulative arrivals and δ_s = min(c, A_s). Then:
 
-E = argmin_{g quadratic} Σ_x μ(x) (C(x) − g(x))², with g(x) = offset + Σ_{i≤j} Q_ij x_i x_j.
+- a green at slot s saves (5 − s)·δ_s vehicle-slots;
+- two greens s < t on one approach interfere by +(5 − t)[min(c, A_t) − min(c, A_t − δ_s)] ≥ 0, which is zero while the second green is still saturated;
+- an A green releases a platoon P_s that costs (4 − s)·P_s at a red B, while a later B green serves it (the "green-wave" term, −(5 − t)[min(c, A^B_t + P_s) − min(c, A^B_t)] ≤ 0).
 
-- **Uniform μ (Walsh truncation).** This keeps exactly the Walsh coefficients with |S| ≤ 2, ĉ_S = 2⁻⁸ Σ_x C(x) χ_S(x)
-  (orthogonality is asserted in the tests). The terms have a direct traffic meaning:
-  - ĉ_{i} is the average marginal cost of giving NS rather than EW green in slot i;
-  - same-intersection ĉ_{ij} > 0 encodes diminishing returns (a green spent on an already-emptied queue is wasted, Fig. a);
-  - A–B couplings arise only from the linked approach, i.e. downstream spillback.
-  Because projection is linear, the A-only approaches contribute no A–B terms.
-- **Adaptive μ (used).** We set μ_κ(x) ∝ exp(−(E(x) − min E)/(κ·σ_E)) and solve E = Proj_{μ(E)} C as a fixed point
-  (8 iterations, κ = 1, frozen). The rationale is that QAOA puts its probability on low-energy states, so approximation
-  error should be smallest there. The weights depend **only on the surrogate's own energies**. The true optimum is never
-  computed or used; it is the scorer that judges the result. The weights stay broad: their effective sample size is
-  157 of 256 schedules on average (167 on R).
+These closed forms are verified against brute force with zero error. Truncating this all-red expansion at order 2 drops the cascade when three or more greens compete for the same vehicles, and it reaches regret ≤ 5 % in only 38 % of scenarios. The higher-order interference therefore has to be folded into the quadratic terms.
 
-Computing the projection evaluates the traffic recurrence on its inputs: 16 local configurations for 4-bit approaches,
-256 for the linked one. That is a modelling transform of the dynamics, not an optimisation. No schedule, coefficient or
-penalty is scenario-specific. The Ising form uses x = (1 − z)/2 and is stored in `qubo.json` with the variable↔qubit map.
+**Rule.** Let D̄_k(p) = E_{x∼Bernoulli(p)} D_k(x) be the multilinear extension. The QUBO is its second-order expansion at the fluid operating point p*:
 
-**Surrogate quality** (QUBO exact minimizer evaluated by the official scorer):
+E(x) = Σ_k [D̄_k(p*) + Σ_i V_ki (x_i − p*_i) + Σ_{i<j} W_kij (x_i − p*_i)(x_j − p*_j)] + switching
 
-| | regret (QUBO min vs C\*) | regret ≤ 5 % | QUBO min optimal | Pearson(E, C) |
+- V_ki = E_{p*}[D_k | x_i = 1] − E_{p*}[D_k | x_i = 0] is the expected cost of turning slot i to NS.
+- W_kij is the pairwise interaction above, averaged with the other slots' greens drawn from p*.
+- Centred monomials are orthogonal under the product measure, so this is exactly the L²(Bernoulli(p*)) projection of each D_k onto quadratics: p* = ½ gives the uniform Walsh truncation, and a vertex gives the all-red expansion.
+- p* is the **Webster equal-saturation split** of green time: p*_{n,t} = clip((N_{n,t} + ½)/(N_{n,t} + E_{n,t} + 1), 0.25, 0.75), with N and E the cumulative NS and EW demands. The linked approach adds the expected platoon f·a^A_{t−1}.
+
+**Integrity.** The rule needs **176 single-approach four-slot recursions** (16 + 16 + 16 + 8 platoon vectors × 16). It never simulates a joint schedule, never forms the 256-entry cost table, and never computes or uses the optimum. A test replaces the scorer and every joint-cost function with traps while the QUBO is built. The result has 24 couplings, so 96 RZZ gates at p = 4.
+
+**Surrogate quality.** The QUBO's exact minimizer is scored by the official scorer. VAL = R + 60 unseen scenarios:
+
+| QUBO rule | regret ≤ 5 % | max regret | minimizer = C\* | Pearson(E, C) |
 |---|---|---|---|---|
-| Scenario R | 0 % (72.0 = C\*) | — | yes | 0.993 |
-| 100 unseen scenarios, uniform μ | 1.77 % mean, max 31 % | 88 % | 52 % | 0.992 |
-| 100 unseen scenarios, adaptive μ | **0.44 % mean, max 8.6 %** | **98 %** | **67 %** | 0.989 |
+| **Webster expansion (submitted)** | **98.4 %** | 5.2 % | 59 % | 0.990 |
+| weighted-L² projection of full table (reference) | 98.4 % | 5.2 % | 72 % | 0.989 |
+| uniform Walsh (p* = ½) | 96.7 % | 11.8 % | 57 % | 0.992 |
+| pairwise physics only (all-red) | 37.7 % | 73.5 % | 26 % | 0.928 |
 
-On the rubric's 5 %→25 % scale, this is 9.67/10 (uniform) vs **9.97/10** (adaptive) expected surrogate-regret credit.
-Scenarios are drawn from the published hidden ranges (arrivals 0–8, capacity 4–6, storage 5–8, w_ov 2–6, w_sw 0.25–1.5,
-NS/EW link, f 0.4–0.8) and filtered to C_rand − C\* > 5.
+On 100 more held-out scenarios (seed 2026), the submitted rule has regret ≤ 5 % in 97 % of cases (mean 0.61 %, max 8.6 %), worth ≈ 9.96/10 rubric points. Scenario R: the minimizer is `11101010` = C\* = 72.
 
 ## 3. QAOA design
 
-**Hamiltonian and normalisation.** H_C = Σ hᵢZᵢ + Σ J_ij Z_iZ_j, divided by its spectral standard deviation σ (computed from
-h, J). This makes angles transfer across scenarios.
+**Hamiltonian.** H_C = Σ hᵢZᵢ + Σ J_ij Z_iZ_j, divided by its std σ so that angles are scale-free.
 
-**Ansatz (p = 4).** |ψ⟩ = Π_k U_M(β_k) U_C(γ_k) |+⟩^⊗8, with:
+**Ansatz (p = 4, multi-angle; Herrman et al. 2022).** Each layer applies:
 
-- U_C = exp(−i[γ_k^h Σ hᵢZᵢ + γ_k^J Σ J_ij Z_iZ_j]): separate angles for fields and couplings;
-- U_M = Π_i exp(+i β_{k,i} Xᵢ): a **per-qubit (multi-angle) mixer**, with H_M = −ΣX so that |+⟩ is its ground state.
+- a cost layer exp(−i[Σᵢ g_{k,i} hᵢZᵢ + g_{k,J} Σ J_ij Z_iZ_j]/σ), with one angle per field term and one shared coupling angle;
+- a mixer layer Πᵢ exp(+i b_{k,i}Xᵢ), with one angle per qubit and H_M = −ΣX, so |+⟩^⊗8 is its ground state.
 
-This gives 40 parameters. The circuit uses 8 qubits, 8 H, 32 RZ, 112 RZZ and 32 RX gates (depth 47). Standard QAOA is
-the special case of tied angles.
+That is 68 parameters. Standard QAOA is the tied-angle special case. The circuit has 8 qubits, 32 RZ, 96 RZZ and 32 RX gates.
 
-**Initialisation.** Three linear-ramp (Trotterised annealing) schedules with Δt ∈ {0.75, 1.0, 1.25}. Each costs one evaluation.
+**Objective.** The Gibbs objective f = −log⟨exp(−η(E − E_min)/σ_E)⟩ with η = 2, computed on **QUBO energies only**.
 
-**Objective.** Gibbs objective −log⟨exp(−η(E − E_min)/σ_E)⟩ with η = 2 (Li et al. 2020). It rewards probability on
-low-energy states rather than only the mean. All objectives use **QUBO energies only, never the official cost.**
+**Exact coordinate training (NFT/Rotosolve; Nakanishi et al. 2020).** Every mixer angle (frequency w = 2) and every field angle (w = 2|hᵢ|/σ) enters as exp(−i t (w/2) P) with P a Pauli. So for any diagonal B, ⟨B⟩(t) = c + a cos w(t − t₀) + b sin w(t − t₀).
 
-**Optimiser and budget.** COBYLA, two stages. Stage 1 optimises the standard 8-parameter ansatz up to evaluation 40. Its
-optimum is embedded into the 40-parameter ansatz (same state), which is refined to a hard cap of **300 evaluations**,
-probes included and asserted.
+- Two evaluations at t₀ ± π/2w recover (a, b, c).
+- The update t* = t₀ + atan2(b, a)/w is the exact 1-D global optimum. Because f is monotone in ⟨B⟩, it also minimises f.
 
-**Training and sampling.** Training uses an exact numpy statevector that implements the identical unitary. It agrees
-with Qiskit's `Statevector` of the exported circuit to ~1e-15, checked on every run. The final 4,096 shots come from
-Qiskit's `StatevectorSampler(seed)` on that circuit. Training is deterministic, so the seed only affects shot noise, which
-explains the tight seed spread. Runtime is about 2 s per seed.
+**Schedule.** Three linear-ramp (annealing) probes, then 10 COBYLA evaluations of standard QAOA, then embedding into the multi-angle ansatz (same state). After that, about two NFT sweeps over 64 coordinates, interleaved with 16-evaluation COBYLA blocks on the shared coupling angles. The hard cap of **300 evaluations** includes probes and is asserted by wrapping the simulator itself.
 
-**Decoding.** The raw-QAOA schedule is the sampled bitstring with the lowest QUBO energy (no scorer used). Separately
-labelled **hybrid**: steepest-descent 1-flip local search on the official cost, started from the 8 most frequent samples.
+**Training and sampling.** Training uses an exact numpy statevector, identical to the exported circuit (|Δp| ≤ 4·10⁻¹⁵, checked every run). The final 4,096 shots come from Qiskit's `StatevectorSampler(seed)`. Training is deterministic, so the seed only moves shot noise. Runtime is about 1 s per seed.
+
+**Decoding.** The raw schedule is the sampled bitstring with the lowest QUBO energy. Separately labelled **hybrid**: 1-flip descent on the official cost, started from the 8 most frequent samples.
 
 ## 4. Results
 
-**Scenario R** (C\* = 72.0, C_rand = 151.25), 5 seeds (0–4):
+**Scenario R** (C\* = 72.0, C_rand = 151.25), sampling seeds 0–4. The baselines are:
 
-| method | official cost |
-|---|---|
-| (1) best alternating `10101010` | 116.0 |
-| (2) greedy larger-queue `01111001` | 92.5 |
-| (3) exact enumeration `11101010` | **72.0** |
-| (4) uniform random expected | 151.25 |
-| (5) QUBO exact minimizer (surrogate ceiling) | **72.0** |
-| (6) QAOA raw samples: mean E_Q | 81.3–82.1 |
-| (6) QAOA decoded schedule (every seed) | **72.0** |
-| (7) HYBRID (labelled) | 72.0 |
+- (1) alternating `10101010`: 116.0;
+- (2) greedy larger-queue `01111001`: 92.5;
+- (3) exact enumeration `11101010`: **72.0**;
+- (4) uniform random: 151.25;
+- (5) QUBO minimizer (surrogate ceiling): **72.0**.
 
-Over the 5 seeds, lift is 0.873 / 0.879 / 0.882 (min / mean / max) and enrichment is 15.14 / 15.37 / 15.56. The exact
-optimum receives 40–42 % of shots.
+(6) **Raw QAOA:** E_Q = 72.41–72.52, lift **0.993 / 0.994** (min / mean over 5 seeds), enrichment **19.52** (maximum 19.69), with **98.5–98.7 %** of all shots on the optimum. The decoded schedule is 72.0 on every seed. (7) Hybrid: 72.0.
 
-**Generalization** (100 unseen scenarios, generator seed 2026, frozen hyper-parameters):
+**Held-out generalization** (100 unseen scenarios, seed 2026, frozen settings):
 
-- lift: mean 0.919, median 0.926, min 0.775;
-- enrichment: mean 17.2, min 10.9 (random = 1, maximum 19.7);
-- the exact optimum appears among the 4,096 samples in **100 %** of scenarios;
-- fraction of the random→optimal gap closed: alternating 0.66, greedy 0.88, QAOA mean-of-samples 0.92,
-  QAOA decoded schedule 0.994, hybrid 1.00.
+- lift: mean **0.979**, median 0.988, min 0.819;
+- enrichment: mean **19.28** (min 0.00);
+- P(opt): mean 0.60;
+- decoded schedule optimal in 62 % of scenarios;
+- fraction of the random→optimal gap closed: alternating 0.66, greedy 0.88, QAOA sample mean 0.979, decoded 0.990, hybrid 1.00.
 
-**Ablations** (`results/ablations.md`; R + 40 unseen scenarios, generator seed 99, 4,096 shots):
+**Ablations** (one change each; R + 40 unseen scenarios, seed 99, 4,096 shots):
 
 | variant (one change from final) | R lift | mean lift | min lift | mean enrich. | mean P(opt) |
 |---|---|---|---|---|---|
-| **final** (p=4, split γ, per-qubit β, Gibbs η=2, adaptive κ=1) | 0.882 | **0.909** | 0.815 | **16.85** | 0.370 |
-| depth p = 1 / 2 / 3 | 0.727 / 0.907 / 0.885 | 0.717 / 0.886 / 0.907 | 0.543 / 0.778 / 0.817 | 10.7 / 16.1 / 16.7 | 0.14 / 0.38 / 0.37 |
-| standard ansatz (1 γ, 1 β per layer) | 0.786 | 0.815 | 0.711 | 13.12 | 0.172 |
-| per-qubit β, single γ | 0.910 | 0.884 | 0.744 | 16.24 | 0.327 |
-| objective ⟨E⟩ / CVaR₀.₂₅ | 0.857 / 0.777 | 0.884 / 0.793 | 0.786 / 0.588 | 15.4 / 13.5 | 0.27 / 0.23 |
-| Gibbs η = 1 / 4 | 0.869 / 0.883 | 0.904 / 0.910 | 0.796 / 0.817 | 16.5 / 17.1 | 0.34 / 0.42 |
-| QUBO uniform μ (Walsh) / κ = 0.5 / κ = 2 | 0.847 / 0.883 / 0.876 | 0.899 / 0.913 / 0.905 | 0.789 / 0.819 / 0.790 | 16.1 / 17.1 / 16.7 | 0.36 / 0.37 / 0.37 |
-| init random angles / near-identity | 0.867 / 0.828 | 0.857 / 0.889 | 0.654 / 0.765 | 14.9 / 15.9 | 0.28 / 0.33 |
-| budget 100 / 200 evaluations | 0.778 / 0.847 | 0.809 / 0.872 | 0.689 / 0.773 | 12.6 / 15.4 | 0.16 / 0.27 |
+| **final** (Webster QUBO, p=4 multi-angle, Gibbs η=2, NFT) | 0.993 | 0.982 | 0.867 | 19.20 | 0.73 |
+| depth p=1 | 1.000 | 0.987 | 0.872 | 19.44 | 0.65 |
+| depth p=2 | 0.997 | 0.987 | 0.848 | 19.26 | 0.78 |
+| depth p=3 | 0.996 | 0.983 | 0.861 | 19.09 | 0.70 |
+| no ZZ couplings in circuit (product-state ansatz) | 1.000 | 0.985 | 0.932 | 19.69 | 0.56 |
+| previous submission: split cost, COBYLA trainer | 0.888 | 0.901 | 0.795 | 16.35 | 0.35 |
+| standard QAOA ansatz, COBYLA | 0.776 | 0.815 | 0.690 | 13.20 | 0.18 |
+| field ansatz, COBYLA trainer | 0.834 | 0.870 | 0.745 | 15.28 | 0.25 |
+| objective <E> (standard) | 0.995 | 0.984 | 0.864 | 19.16 | 0.70 |
+| objective CVaR alpha=0.25 (COBYLA) | 0.807 | 0.799 | 0.671 | 13.35 | 0.22 |
+| Gibbs eta=1 | 0.994 | 0.983 | 0.867 | 19.23 | 0.71 |
+| Gibbs eta=4 | 0.993 | 0.982 | 0.868 | 19.21 | 0.72 |
+| QUBO: adaptive projection of full cost table | 0.992 | 0.987 | 0.948 | 19.46 | 0.77 |
+| QUBO: uniform Walsh projection | 0.995 | 0.979 | 0.839 | 19.22 | 0.71 |
+| QUBO: pairwise physics only (all-red expansion) | 0.904 | 0.867 | 0.408 | 14.42 | 0.30 |
+| init: random angles (3 probes) | 0.997 | 0.974 | 0.848 | 19.02 | 0.71 |
+| init: near-identity | 1.000 | 0.989 | 0.849 | 19.65 | 0.71 |
+| budget 100 evaluations | 0.921 | 0.928 | 0.836 | 17.43 | 0.63 |
+| budget 200 evaluations | 0.988 | 0.977 | 0.861 | 18.97 | 0.71 |
 
-Penalties: the encoding needs no constraint penalty (Section 1). The ablated weighting hyper-parameters are κ (surrogate
-measure) and η (objective temperature). The largest gains come from the multi-angle mixer (+0.07 lift), the annealing
-initialisation (+0.05 vs random) and the full 300-evaluation budget. η = 4 and κ = 0.5 look marginally better here but
-were **not** re-tuned on this reporting set; the frozen values stand.
+Reading: (i) the NFT trainer is the main gain: +0.08 lift over the previous COBYLA submission and +0.17 over standard QAOA. (ii) The QUBO rules agree within 0.01 mean lift. The full-table projection is a little more robust (min 0.948), and pairwise-only physics is clearly worse. (iii) Depth p = 1–3 already reaches the same level. Removing the ZZ couplings is not worse on this set; on VAL it collapsed once (min enrichment 0). At 8 qubits, the problem is solved to the surrogate ceiling by a near-product state, so no advantage from entanglement is claimed. (iv) The objective (Gibbs vs ⟨E⟩, η) barely matters with exact coordinate updates. CVaR needs COBYLA and is worse. (v) Budget matters up to about 200 evaluations. There is no constraint penalty to ablate (Section 1), so the weighting hyper-parameters were ablated instead.
 
-## 5. Extension: noise analysis and noise-aware design (`experiments/noise.py`)
+## 5. Extensions
 
-**Noise model.** The circuit is transpiled to {rz, sx, x, cx}. A 2-qubit depolarizing channel with rate e₂ follows each
-cx, a 1-qubit channel with rate e₂/10 follows each sx/x, and each readout bit flips with probability e₂. Probabilities
-are computed exactly with Aer density matrices on R plus 8 unseen scenarios.
+**(a) Three-intersection chain A→B→C** (`lab/chain_extension/`, 12 qubits).
 
-Mean lift on R + 8 unseen scenarios (exact noisy distributions):
+- *Definition.* Two links l₁ = A→B and l₂ = B→C, each with a phase and a fraction. The slot semantics are copied line by line from the scorer.
+- *Reduction.* With C empty and f₂ = 0, the chain cost equals the official cost on all 4,096 schedules (tested on R + 30 scenarios).
+- *Light cone.* Approach (n, p), reached through m same-phase links, depends only on the upstream bits in slots 1..4−m, so |S_k| ≤ T(T+1)/2 = 10 for any corridor length. The local QUBO therefore needs Σ 2^|S_k| simulations: 704 vs 4,096 at L = 3, and 5,904 vs 2³² at L = 8.
+- *Results.* The 2-node design transfers unchanged (previous COBYLA trainer). On 20 random chains × 5 seeds: lift 0.871 (min 0.753), enrichment 17.8, regret ≤ 5 % in 90 %. Joint 12-bit coordination beats a sequential (A,B)-then-C optimisation, which misses the optimum in 13/20 scenarios.
+
+**(b) Noise and hardware** (`experiments/noise.py`, `lab/shots_hardware/`). Exact density matrices with 2q depolarizing rate e₂ (1q rate e₂/10, readout flip e₂):
 
 | variant | cx | e₂ = 0 | 10⁻³ | 3·10⁻³ | 10⁻² | 2·10⁻² | 5·10⁻² |
 |---|---|---|---|---|---|---|---|
-| p = 1 | 56 | 0.716 | 0.705 | 0.683 | 0.613 | 0.523 | 0.319 |
-| p = 2 | 112 | 0.879 | 0.851 | **0.799** | 0.640 | 0.466 | 0.178 |
-| p = 4 (submitted) | 224 | **0.899** | 0.847 | 0.752 | 0.495 | 0.270 | 0.042 |
-| p = 4, pruned τ = 0.1 | 115 | 0.881 | **0.852** | 0.797 | 0.635 | 0.461 | 0.182 |
-| p = 2, pruned τ = 0.25 | 35 | 0.797 | 0.788 | 0.771 | **0.712** | **0.636** | **0.452** |
+| p=1 | 46 | 1.000 | 0.983 | 0.951 | 0.848 | 0.721 | 0.447 |
+| p=2 | 91 | 0.996 | 0.966 | 0.909 | 0.736 | 0.550 | 0.236 |
+| p=3 | 137 | 0.995 | 0.951 | 0.869 | 0.640 | 0.421 | 0.127 |
+| p=4 (submitted) | 182 | 0.993 | 0.934 | 0.830 | 0.555 | 0.320 | 0.068 |
+| p=4, pruned tau=0.1 | 114 | 0.943 | 0.908 | 0.844 | 0.658 | 0.469 | 0.182 |
+| p=4, pruned tau=0.25 | 69 | 0.891 | 0.871 | 0.832 | 0.710 | 0.568 | 0.300 |
+| p=2, pruned tau=0.25 | 35 | 0.893 | 0.883 | 0.861 | 0.790 | 0.699 | 0.484 |
 
-**Finding.** The optimal depth is noise-dependent. p = 4 is best only when noiseless. At e₂ ≈ 3·10⁻³ (current
-heavy-hex devices), the shallower p = 2 circuit wins, and pruning weak couplings (|J| < τ·max|J|) trades a little
-noiseless lift for fewer CNOTs. On hardware we would therefore pick p and τ from a calibrated e₂ rather than fixing p = 4.
+Mean lift on R + 8 unseen scenarios. Shallow circuits degrade far more slowly: at e₂ = 3·10⁻³, p = 1 keeps 0.951 against 0.830 for p = 4.
+
+Routing on an IBM heavy-hex lattice (opt. level 3) roughly doubles the CNOT count: 187 → 360 at p = 4, measured with the previous trainer. Pruning couplings below 0.25·max|J| and refitting brings it to 47 at p = 2, with lift 0.836 at e₂ = 3·10⁻³, against 0.662 for the unpruned p = 4 circuit. On hardware, p and τ should therefore be chosen from a calibrated e₂.
+
+**(c) Shot-based training** (honest negative). Estimating the objective from N shots per evaluation (SPSA, 300 evaluations) costs lift: VAL 0.844 at N = 1,024 and 0.814 at N = 256, vs 0.907 for exact training of the previous design. Exact coordinate updates rely on exact expectations, so on hardware NFT would need more shots per coordinate.
+
+**(d) Parameter-transfer initialisation.** A single angle vector learned offline on 150 training scenarios lifts the COBYLA trainer from 0.907 to 0.940 on VAL. It is superseded by NFT, which needs no stored angles.
 
 ## 6. Limitations
 
-- The quadratic projection cannot represent the min/max hinges exactly. In 2 % of scenarios the QUBO minimizer is 5–9 %
-  above C\*, which bounds the decoded schedule (the hybrid repairs it). The lift ceiling of the surrogate itself is ≈ 0.99.
-- Training uses exact expectations. With shot-based training, COBYLA would need a larger tolerance or SPSA. We expect lower
-  lift at equal budget; this was not measured.
-- The dense A–B coupling graph is the main noise cost (224 cx at p = 4). On a heavy-hex layout, SWAP routing would add more.
-- The projection evaluates the recurrence on all 2^|S_k| local inputs. For long corridors the same rule applies per
-  approach, but the adaptive weights would need Monte-Carlo estimation.
-- Quantum advantage is neither claimed nor expected at 8 qubits. Exact enumeration of 256 schedules is trivial and is used
-  only as a benchmark.
+- **Surrogate ceiling.** The quadratic surrogate cannot represent the min/max hinges exactly. In about 2 % of scenarios its minimizer is 5–9 % above C\*, and this bounds the raw lift. The hybrid repairs it.
+- **Concentration.** The trained state is close to a product state: the mean single-qubit entropy is 0.04 bits. At 8 qubits, multi-angle QAOA concentrates almost all shots on the QUBO minimizer. The ZZ layers give no consistent gain at this size (ablation iii).
+- **Coordinate-descent trap.** In 1 of 100 held-out scenarios (none on VAL), NFT converged to a near-basis state two bit-flips from the QUBO minimizer. That state ranks 13th by cost and is excluded from the elite set by the tie-break, so enrichment is 0 while lift stays 0.905. Single-angle updates cannot cross the two-flip barrier. We did not add restarts triggered by the known QUBO ground energy, because that would use classical knowledge of the answer.
+- **Exact training.** Training uses exact expectations; extension (c) quantifies the shot-noise cost. Dense couplings dominate the noise budget.
+- **No quantum advantage** is claimed at 8 qubits. Enumeration of 256 schedules is used only as a benchmark.

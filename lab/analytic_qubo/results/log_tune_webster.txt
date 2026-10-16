@@ -1,0 +1,21 @@
+{
+ "webster": {
+  "n": 60,
+  "mean_lift": 0.8914705296560924,
+  "min_lift": 0.7069106522183602,
+  "mean_enrichment": 16.661698717948717,
+  "mean_p_optimal": 0.28282063802083335,
+  "mean_exact_lift": 0.8920316331251309,
+  "mean_regret": 0.007429276819588169,
+  "max_regret": 0.058823529411764705,
+  "frac_regret_le_5pct": 0.9833333333333333,
+  "frac_regret_zero": 0.6833333333333333,
+  "regret_points_of_10": 9.992647058823529,
+  "mean_pearson": 0.9908799723259486,
+  "mean_spearman": 0.9910714813649194,
+  "frac_schedule_optimal": 0.6833333333333333,
+  "max_evals": 300,
+  "mean_seconds": 3.234336233139038
+ }
+}
+wall 108s

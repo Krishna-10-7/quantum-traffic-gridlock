@@ -1,0 +1,5 @@
+current (ramp, as run.solve)                  lift 0.9076 (min 0.771) enr 16.63 (min 9.83) P(opt) 0.331 f 0.1965 evals 300 (199s)
+ramp, cached x0                               lift 0.9073 (min 0.770) enr 16.65 (min 9.72) P(opt) 0.322 f 0.1987 evals 300 (188s)
+transfer rich, rho2=0.075                     lift 0.9459 (min 0.852) enr 18.18 (min 9.40) P(opt) 0.437 f 0.1076 evals 300 (175s)
+transfer rich, rho2=0.03                      lift 0.9442 (min 0.838) enr 18.16 (min 9.99) P(opt) 0.431 f 0.1117 evals 300 (220s)
+transfer rich, rho2=0.15                      lift 0.9414 (min 0.830) enr 18.12 (min 10.63) P(opt) 0.424 f 0.1146 evals 300 (204s)

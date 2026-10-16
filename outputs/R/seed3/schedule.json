@@ -19,7 +19,7 @@
   "alternatives": {
     "qaoa_most_frequent": {
       "bits": "11101010",
-      "shots": 1668,
+      "shots": 4037,
       "official_cost": 72.0
     },
     "qubo_exact_minimizer": {
@@ -29,7 +29,7 @@
     "hybrid_labelled": {
       "bits": "11101010",
       "cost": 72.0,
-      "official_cost_evaluations": 112,
+      "official_cost_evaluations": 128,
       "label": "HYBRID (QAOA samples + classical 1-flip descent); not raw QAOA"
     }
   }

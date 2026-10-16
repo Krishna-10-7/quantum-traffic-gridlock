@@ -1,0 +1,24 @@
+
+tune(seed31,n200)
+  clip=0.15 link=True      <=5% 0.975  =0 0.665  mean  0.75%  max  43.6%  Pearson 0.9900
+  clip=0.2 link=True       <=5% 0.980  =0 0.670  mean  0.53%  max   7.7%  Pearson 0.9902
+  clip=0.25 link=True      <=5% 0.985  =0 0.680  mean  0.50%  max   5.9%  Pearson 0.9904
+  clip=0.3 link=True       <=5% 0.980  =0 0.665  mean  0.56%  max  11.0%  Pearson 0.9908
+  clip=0.35 link=True      <=5% 0.980  =0 0.655  mean  0.57%  max  11.0%  Pearson 0.9911
+  clip=0.4 link=True       <=5% 0.965  =0 0.645  mean  0.67%  max  11.0%  Pearson 0.9916
+  clip=0.25 link=False     <=5% 0.970  =0 0.655  mean  0.64%  max   9.1%  Pearson 0.9904
+  clip=0.5 link=True       <=5% 0.920  =0 0.600  mean  1.25%  max  19.5%  Pearson 0.9922
+  repo adaptive            <=5% 0.980  =0 0.725  mean  0.43%  max  11.0%
+  repo uniform             <=5% 0.920  =0 0.600  mean  1.25%  max  19.5%
+
+VAL
+  clip=0.15 link=True      <=5% 0.984  =0 0.607  mean  0.72%  max   5.2%  Pearson 0.9896
+  clip=0.2 link=True       <=5% 0.984  =0 0.590  mean  0.76%  max   5.2%  Pearson 0.9899
+  clip=0.25 link=True      <=5% 0.984  =0 0.590  mean  0.76%  max   5.2%  Pearson 0.9901
+  clip=0.3 link=True       <=5% 0.984  =0 0.590  mean  0.76%  max   5.2%  Pearson 0.9904
+  clip=0.35 link=True      <=5% 0.984  =0 0.590  mean  0.75%  max   5.2%  Pearson 0.9907
+  clip=0.4 link=True       <=5% 0.984  =0 0.590  mean  0.79%  max   5.2%  Pearson 0.9911
+  clip=0.25 link=False     <=5% 0.984  =0 0.607  mean  0.71%  max   5.2%  Pearson 0.9899
+  clip=0.5 link=True       <=5% 0.967  =0 0.574  mean  1.08%  max  11.8%  Pearson 0.9917
+  repo adaptive            <=5% 0.984  =0 0.721  mean  0.45%  max   5.2%
+  repo uniform             <=5% 0.967  =0 0.574  mean  1.08%  max  11.8%

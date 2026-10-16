@@ -43,7 +43,7 @@ def test_locality_of_approach_costs():
 
 
 def test_qubo_ising_equivalence():
-    for measure in ('uniform', 'adaptive'):
+    for measure in ('webster', 'uniform', 'adaptive'):
         off, Q = qb.build_qubo(R, measure=measure)
         h, J, const = qb.qubo_to_ising(Q, off)
         z = 1 - 2 * qb.X
@@ -61,6 +61,42 @@ def test_uniform_projection_is_walsh_truncation():
         assert abs(resid @ z[:, i]) < 1e-6
         for j in range(i + 1, 8):
             assert abs(resid @ (z[:, i] * z[:, j])) < 1e-6
+
+
+def test_webster_qubo_never_uses_joint_schedule_costs():
+    """The default QUBO is built from 176 single-approach recursions only: the official scorer,
+    the joint cost and the 256-schedule cost table must never be called while it is built."""
+    import analytic_qubo
+
+    def forbidden(*a, **k):
+        raise AssertionError('joint-schedule cost evaluated during QUBO construction')
+    saved = scorer.evaluate, tm.cost, tm.cost_table, tm.approach_costs
+    scorer.evaluate = tm.cost = tm.cost_table = tm.approach_costs = forbidden
+    try:
+        off, Q, info = analytic_qubo.build_analytic_qubo(R, return_info=True)
+    finally:
+        scorer.evaluate, tm.cost, tm.cost_table, tm.approach_costs = saved
+    assert info['approach_sims'] == 176
+    assert np.allclose(Q[3, 4:], 0)   # A4's platoon leaves the model: no A4-B couplings
+
+
+def test_training_budget_counts_every_simulation():
+    """Wrap the simulator itself: every statevector run during training is a counted evaluation."""
+    import qaoa
+    calls = {'n': 0}
+    orig = qaoa.Ansatz.statevector
+
+    def counting(self, params):
+        calls['n'] += 1
+        return orig(self, params)
+    qaoa.Ansatz.statevector = counting
+    try:
+        cfg = run.DEFAULTS
+        off, Q = qb.build_qubo(R)
+        _, _, history, _ = run.train_qubo(off, Q, cfg, seed=0)
+    finally:
+        qaoa.Ansatz.statevector = orig
+    assert calls['n'] == len(history) <= 300, (calls['n'], len(history))
 
 
 def test_greedy_matches_published_vector():

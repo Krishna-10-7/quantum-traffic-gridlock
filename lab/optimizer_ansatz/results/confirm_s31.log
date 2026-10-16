@@ -1,0 +1,2 @@
+field-nft p=4 direct s1=10 gen16           lift 0.9856 (min 0.880)  enr 19.52 (min 19.24)  P(opt) 0.712  f 0.0132  evals<=300  drift 4.6e-16  0.96s
+                                           identity layers: mean 0.00  max 0 (of p=4)

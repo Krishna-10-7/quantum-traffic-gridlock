@@ -1,0 +1,148 @@
+=== report
+{
+ "all_runs": {
+  "n": 105,
+  "mean_lift": 0.8685562957525202,
+  "min_lift": 0.7530390073476444,
+  "mean_enrichment": 17.795238095238094,
+  "min_enrichment": 12.336538461538462,
+  "mean_exact_lift": 0.8689733857842558,
+  "mean_p_opt": 0.11436941964285714,
+  "frac_regret_le_5pct": 0.9047619047619048,
+  "mean_regret": 0.010924686017980339,
+  "max_regret": 0.08267090620031796,
+  "mean_rzz": 246.47619047619048,
+  "mean_seconds": 5.975166120983306,
+  "max_seconds": 7.8081724643707275
+ },
+ "random_scenarios_only": {
+  "n": 100,
+  "mean_lift": 0.8713991482174511,
+  "min_lift": 0.7530390073476444,
+  "mean_enrichment": 17.801826923076923,
+  "min_enrichment": 12.336538461538462,
+  "mean_exact_lift": 0.8717522352362006,
+  "mean_p_opt": 0.1161865234375,
+  "frac_regret_le_5pct": 0.9,
+  "mean_regret": 0.011470920318879354,
+  "max_regret": 0.08267090620031796,
+  "mean_rzz": 245.6,
+  "mean_seconds": 6.049203679561615,
+  "max_seconds": 7.8081724643707275
+ },
+ "R3": {
+  "n": 5,
+  "mean_lift": 0.8116992464539006,
+  "min_lift": 0.8095899822695035,
+  "mean_enrichment": 17.66346153846154,
+  "min_enrichment": 17.60096153846154,
+  "mean_exact_lift": 0.8133963967453599,
+  "mean_p_opt": 0.07802734375,
+  "frac_regret_le_5pct": 1.0,
+  "mean_regret": 0.0,
+  "max_regret": 0.0,
+  "mean_rzz": 264.0,
+  "mean_seconds": 4.494414949417115,
+  "max_seconds": 4.872986316680908
+ },
+ "robustness_min_lift_over_seeds": {
+  "mean_over_scenarios": 0.8664918989725223,
+  "min_over_scenarios": 0.7530390073476444
+ },
+ "gap_closed_mean_random": {
+  "alternating": 0.666157843785453,
+  "greedy": 0.8813328612936557,
+  "sequential": 0.9131428096194097,
+  "qubo_min": 0.9867756436307615,
+  "mean_E_Q": 0.8713991482174512,
+  "decoded": 0.9867756436307615,
+  "hybrid": 0.9998781184536278
+ },
+ "frac_decoded_optimal": 0.5714285714285714,
+ "frac_hybrid_optimal": 0.9523809523809523,
+ "aligned_vs_not": {
+  "True": {
+   "n": 10,
+   "mean_lift": 0.8702631532801393,
+   "mean_regret": 0.005284600515455753,
+   "mean_rzz": 251.2
+  },
+  "False": {
+   "n": 10,
+   "mean_lift": 0.8725351431547633,
+   "mean_regret": 0.017657240122302964,
+   "mean_rzz": 240.0
+  }
+ },
+ "wall_seconds": 326.54070377349854
+}
+R3             al=1 C*= 131.50 Crand= 241.66 alt= 187.50 gr= 174.00 seq= 139.00 qmin= 131.50 EQ= 152.24 lift=0.812/0.810 enr=17.66 popt=0.078 reg=0.000 t=4.9s
+chain1001_0    al=1 C*=  76.00 Crand= 142.70 alt= 100.25 gr=  76.75 seq=  79.25 qmin=  76.00 EQ=  89.60 lift=0.796/0.795 enr=17.04 popt=0.004 reg=0.000 t=6.2s
+chain1001_1    al=0 C*=  98.50 Crand= 262.70 alt= 149.75 gr= 104.50 seq=  98.50 qmin=  98.50 EQ= 122.48 lift=0.854/0.852 enr=18.32 popt=0.061 reg=0.000 t=6.2s
+chain1001_2    al=0 C*= 321.75 Crand= 445.11 alt= 381.25 gr= 342.75 seq= 376.25 qmin= 323.00 EQ= 330.92 lift=0.926/0.924 enr=18.73 popt=0.226 reg=0.004 t=6.2s
+chain1001_3    al=0 C*= 164.00 Crand= 252.12 alt= 202.75 gr= 176.75 seq= 167.50 qmin= 164.00 EQ= 172.13 lift=0.908/0.904 enr=18.49 popt=0.382 reg=0.000 t=6.1s
+chain1001_4    al=0 C*= 157.25 Crand= 324.50 alt= 184.25 gr= 188.50 seq= 167.50 qmin= 170.25 EQ= 179.87 lift=0.865/0.864 enr=16.82 popt=0.017 reg=0.083 t=6.3s
+chain1001_5    al=1 C*= 150.00 Crand= 249.86 alt= 176.75 gr= 150.25 seq= 150.00 qmin= 150.25 EQ= 158.96 lift=0.910/0.907 enr=18.57 popt=0.181 reg=0.002 t=6.7s
+chain1001_6    al=0 C*=  75.00 Crand= 196.21 alt= 115.00 gr=  78.00 seq=  75.00 qmin=  80.50 EQ=  87.43 lift=0.897/0.896 enr=18.70 popt=0.030 reg=0.073 t=6.7s
+chain1001_7    al=0 C*= 264.75 Crand= 386.36 alt= 313.25 gr= 295.25 seq= 264.75 qmin= 266.00 EQ= 278.54 lift=0.887/0.885 enr=19.11 popt=0.062 reg=0.005 t=6.5s
+chain1001_8    al=1 C*= 240.00 Crand= 308.47 alt= 252.50 gr= 248.50 seq= 248.50 qmin= 240.00 EQ= 250.48 lift=0.847/0.845 enr=17.96 popt=0.118 reg=0.000 t=6.6s
+chain1001_9    al=1 C*= 262.00 Crand= 424.68 alt= 286.00 gr= 272.00 seq= 271.00 qmin= 262.00 EQ= 301.63 lift=0.756/0.753 enr=13.29 popt=0.025 reg=0.000 t=6.4s
+chain1001_10   al=0 C*= 365.00 Crand= 426.06 alt= 384.00 gr= 404.00 seq= 380.00 qmin= 365.00 EQ= 378.33 lift=0.782/0.780 enr=16.88 popt=0.056 reg=0.000 t=6.4s
+chain1001_11   al=0 C*= 148.50 Crand= 286.12 alt= 218.50 gr= 167.50 seq= 148.50 qmin= 148.50 EQ= 163.44 lift=0.891/0.889 enr=18.08 popt=0.070 reg=0.000 t=5.8s
+chain1001_12   al=1 C*= 217.50 Crand= 293.69 alt= 223.50 gr= 231.50 seq= 217.50 qmin= 217.50 EQ= 223.44 lift=0.922/0.920 enr=18.83 popt=0.169 reg=0.000 t=6.1s
+chain1001_13   al=0 C*= 218.75 Crand= 392.56 alt= 336.25 gr= 229.00 seq= 229.00 qmin= 218.75 EQ= 228.72 lift=0.943/0.942 enr=19.61 popt=0.288 reg=0.000 t=6.1s
+chain1001_14   al=1 C*= 166.50 Crand= 247.75 alt= 182.50 gr= 173.50 seq= 180.50 qmin= 174.00 EQ= 174.83 lift=0.898/0.896 enr=18.82 popt=0.004 reg=0.045 t=6.2s
+chain1001_15   al=0 C*= 104.50 Crand= 207.06 alt= 147.75 gr= 109.25 seq= 104.75 qmin= 105.75 EQ= 127.74 lift=0.773/0.770 enr=12.47 popt=0.003 reg=0.012 t=6.8s
+chain1001_16   al=1 C*= 173.00 Crand= 226.34 alt= 186.50 gr= 174.50 seq= 191.50 qmin= 173.50 EQ= 179.56 lift=0.877/0.875 enr=17.69 popt=0.042 reg=0.003 t=6.3s
+chain1001_17   al=1 C*= 533.50 Crand= 694.64 alt= 622.25 gr= 550.25 seq= 555.50 qmin= 533.50 EQ= 553.69 lift=0.875/0.874 enr=19.49 popt=0.018 reg=0.000 t=6.8s
+chain1001_18   al=1 C*=  89.75 Crand= 181.68 alt= 120.25 gr=  94.00 seq=  89.75 qmin=  89.75 EQ=  95.11 lift=0.942/0.938 enr=18.81 popt=0.547 reg=0.000 t=6.5s
+chain1001_19   al=1 C*= 308.25 Crand= 525.75 alt= 365.25 gr= 314.75 seq= 309.00 qmin= 309.25 EQ= 334.35 lift=0.880/0.878 enr=18.33 popt=0.020 reg=0.003 t=7.8s
+=== ablate
+final(transferred)               lift 0.870 (min 0.761)  enr 17.83  P(opt) 0.115  regret 0.0109 (<=5%: 0.90)  rzz 246
+standard ansatz                  lift 0.798 (min 0.699)  enr 16.02  P(opt) 0.046  regret 0.0109 (<=5%: 0.90)  rzz 246
+split gamma, single beta         lift 0.787 (min 0.701)  enr 15.40  P(opt) 0.042  regret 0.0109 (<=5%: 0.90)  rzz 246
+p=2                              lift 0.853 (min 0.723)  enr 17.13  P(opt) 0.114  regret 0.0109 (<=5%: 0.90)  rzz 123
+uniform mu (local)               lift 0.864 (min 0.709)  enr 17.60  P(opt) 0.112  regret 0.0263 (<=5%: 0.81)  rzz 162
+adaptive, light-cone sparse      lift 0.871 (min 0.761)  enr 17.86  P(opt) 0.116  regret 0.0109 (<=5%: 0.90)  rzz 178
+p=1                              lift 0.703 (min 0.482)  enr 12.57  P(opt) 0.037  regret 0.0109 (<=5%: 0.90)  rzz 62
+p=3                              lift 0.867 (min 0.729)  enr 17.72  P(opt) 0.106  regret 0.0109 (<=5%: 0.90)  rzz 185
+kappa=0.5                        lift 0.874 (min 0.751)  enr 17.95  P(opt) 0.123  regret 0.0032 (<=5%: 1.00)  rzz 246
+init random                      lift 0.816 (min 0.660)  enr 16.34  P(opt) 0.086  regret 0.0109 (<=5%: 0.90)  rzz 246
+=== subproblem
+{
+ "lift8": 0.914032665171025,
+ "enr8": 16.859775641025642,
+ "popt8": 0.2727457682291667,
+ "lift12": 0.8767525662973275,
+ "enr12": 18.460336538461537,
+ "popt12": 0.1102294921875,
+ "min_lift8": 0.8121354214700729,
+ "min_lift12": 0.7390211225352497
+}
+=== corridor
+L=3 corridor model == chain model (cost and scopes)
+L=4 light-cone invariance verified on 65,536 schedules x 12 corridors; max |S| = 10 = T(T+1)/2
+bits that actually matter, by (node, |S|): {(0, 4): 4, (1, 4): 4, (1, 7): 7, (2, 4): 4, (2, 7): 6, (2, 9): 9, (3, 4): 4, (3, 7): 7, (3, 9): 8, (3, 10): 9}
+L=4 aligned corridor: local uniform QUBO uses 1744 simulations (global: 65536); residual orthogonal to all order<=2 Walsh features (max 3.3e-13)
+  L=2: aligned-corridor local simulations = 176  vs global 2^8
+  L=3: aligned-corridor local simulations = 704  vs global 2^12
+  L=4: aligned-corridor local simulations = 1744  vs global 2^16
+  L=5: aligned-corridor local simulations = 2784  vs global 2^20
+  L=6: aligned-corridor local simulations = 3824  vs global 2^24
+  L=7: aligned-corridor local simulations = 4864  vs global 2^28
+  L=8: aligned-corridor local simulations = 5904  vs global 2^32
+done in 3.3s
+=== budget
+{
+ "final@100": 0.7844200069513806,
+ "final@200": 0.844628441843355,
+ "final@300": 0.8763051911820344,
+ "final@600": 0.9147402385471292,
+ "final@1000": 0.9399957450285042,
+ "standard@100": 0.7735360162308366,
+ "standard@200": 0.7961715667215924,
+ "standard@300": 0.8068951730820523,
+ "standard@600": 0.8167397926512069,
+ "standard@1000": 0.8176712924833908
+}
+ALLDONE

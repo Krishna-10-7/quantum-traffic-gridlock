@@ -3,20 +3,22 @@
   "seed": 1,
   "config": {
     "p": 4,
-    "cost_mode": "split",
+    "cost_mode": "field",
     "mixer_mode": "qubit",
     "kind": "gibbs",
     "eta": 2.0,
-    "measure": "adaptive",
+    "measure": "webster",
     "kappa": 1.0,
-    "stage1_evals": 40,
+    "stage1_evals": 13,
     "ramp_dts": [
       0.75,
       1.0,
       1.25
     ],
     "init": "ramp",
-    "max_evals": 300
+    "max_evals": 300,
+    "trainer": "nft",
+    "gen_evals": 16
   },
   "baselines": {
     "1_best_alternating": {
@@ -41,47 +43,47 @@
     "5_qubo_exact_minimizer": {
       "bits": "11101010",
       "cost": 72.0,
-      "qubo_energy": 76.83582407861007
+      "qubo_energy": 80.00569279830313
     },
     "6_qaoa_raw_samples": {
       "shots": 4096,
-      "E_Q": 81.392578125,
+      "E_Q": 72.4696044921875,
       "C_star": 72.0,
       "C_rand": 151.25,
-      "lift": 0.8814816640378549,
-      "elite_fraction": 0.783447265625,
-      "enrichment": 15.427884615384615,
-      "p_optimal": 0.419677734375,
+      "lift": 0.9940743912657729,
+      "elite_fraction": 0.99169921875,
+      "enrichment": 19.528846153846153,
+      "p_optimal": 0.987060546875,
       "best_sampled": {
         "bits": "11101010",
         "cost": 72.0
       },
-      "distinct_bitstrings": 61
+      "distinct_bitstrings": 19
     },
     "7_hybrid_labelled": {
       "bits": "11101010",
       "cost": 72.0,
-      "official_cost_evaluations": 112,
+      "official_cost_evaluations": 136,
       "label": "HYBRID (QAOA samples + classical 1-flip descent); not raw QAOA"
     }
   },
   "surrogate": {
     "regret_abs": 0.0,
     "regret_rel": 0.0,
-    "pearson_qubo_vs_official": 0.9930821426015876,
-    "spearman_qubo_vs_official": 0.9965781643396656
+    "pearson_qubo_vs_official": 0.9942295161569178,
+    "spearman_qubo_vs_official": 0.9958586060883495
   },
   "qaoa_exact_distribution": {
-    "E_Q": 81.53143223445542,
-    "lift": 0.8797295617103417,
-    "enrichment": 15.400223216686575,
-    "p_optimal": 0.42053662142738746
+    "E_Q": 72.43954155897372,
+    "lift": 0.9944537342716251,
+    "enrichment": 19.535924121715322,
+    "p_optimal": 0.985880458125549
   },
   "circuit": {
     "qubits": 8,
-    "depth": 47,
+    "depth": 46,
     "ops": {
-      "rzz": 112,
+      "rzz": 96,
       "rz": 32,
       "rx": 32,
       "h": 8,
@@ -89,16 +91,16 @@
       "barrier": 1
     },
     "p": 4,
-    "n_parameters": 40,
-    "max_abs_prob_diff_circuit_vs_trainer": 6.661338147750939e-16
+    "n_parameters": 68,
+    "max_abs_prob_diff_circuit_vs_trainer": 1.5543122344752192e-15
   },
   "training": {
     "objective_evaluations": 300,
-    "final_objective": 0.23221479197974593
+    "final_objective": 0.007257871979171157
   },
   "runtime_seconds": {
-    "qubo": 0.018004894256591797,
-    "train": 1.5347247123718262,
-    "total": 1.6327424049377441
+    "qubo": 0.008004188537597656,
+    "train": 0.6204533576965332,
+    "total": 0.7259178161621094
   }
 }

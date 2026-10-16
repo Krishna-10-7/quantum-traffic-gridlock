@@ -1,0 +1,28 @@
+field-nft p=4 direct gen12                 lift 0.9817 (min 0.886)  enr 19.41 (min 18.39)  P(opt) 0.699  f 0.0186  evals<=300  drift 6.7e-16  1.18s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=4 direct gen16                 lift 0.9825 (min 0.887)  enr 19.42 (min 18.01)  P(opt) 0.700  f 0.0176  evals<=300  drift 1.0e-15  1.21s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=4 direct s1=25                 lift 0.9828 (min 0.884)  enr 19.43 (min 19.16)  P(opt) 0.705  f 0.0176  evals<=299  drift 1.0e-15  1.15s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=4 direct s1=10                 lift 0.9829 (min 0.881)  enr 19.45 (min 19.14)  P(opt) 0.705  f 0.0174  evals<=299  drift 7.9e-16  1.18s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=4 grow (150,200,250) [old, layer-1-first] lift 0.9770 (min 0.798)  enr 19.43 (min 17.25)  P(opt) 0.638  f 0.0216  evals<=300  drift 1.2e-15  0.65s
+                                           identity layers: mean 2.08  max 3 (of p=4)
+field-nft p=4 grow2 new-first (60,130,210) lift 0.9169 (min 0.699)  enr 18.18 (min 12.87)  P(opt) 0.550  f 0.0918  evals<=300  drift 8.0e-16  0.79s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=4 grow2 new-first (100,170,240) lift 0.9542 (min 0.738)  enr 18.99 (min 14.41)  P(opt) 0.605  f 0.0465  evals<=300  drift 8.3e-16  0.69s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=4 grow2 new-first (150,200,250) lift 0.9770 (min 0.798)  enr 19.43 (min 17.25)  P(opt) 0.638  f 0.0216  evals<=300  drift 2.1e-15  0.68s
+                                           identity layers: mean 0.05  max 1 (of p=4)
+field-nft p=4 stage1 layerwise INTERP 10/20/30/40 lift 0.9748 (min 0.878)  enr 19.28 (min 18.22)  P(opt) 0.617  f 0.0261  evals<=299  drift 9.1e-16  1.16s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=4 (gen8, s1=40) [reference]    lift 0.9802 (min 0.886)  enr 19.37 (min 18.60)  P(opt) 0.695  f 0.0209  evals<=300  drift 1.1e-15  1.22s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+field-nft p=3 (s1=25)                      lift 0.9849 (min 0.898)  enr 19.53 (min 19.27)  P(opt) 0.656  f 0.0151  evals<=300  drift 7.9e-16  0.91s
+                                           identity layers: mean 0.00  max 0 (of p=3)
+split cobyqa rho2=0.075                    lift 0.9129 (min 0.805)  enr 17.62 (min 11.50)  P(opt) 0.334  f 0.1718  evals<=299  drift 0.0e+00  3.83s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+split layerwise INTERP 10/20/30/40 + cobyla lift 0.9088 (min 0.773)  enr 17.34 (min 10.27)  P(opt) 0.299  f 0.1904  evals<=299  drift 0.0e+00  2.89s
+                                           identity layers: mean 0.00  max 0 (of p=4)
+split layerwise INTERP 10/20/30/40 + cobyqa lift 0.9309 (min 0.828)  enr 18.07 (min 10.51)  P(opt) 0.390  f 0.1351  evals<=299  drift 0.0e+00  3.67s
+                                           identity layers: mean 0.00  max 0 (of p=4)

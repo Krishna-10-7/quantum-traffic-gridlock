@@ -1,0 +1,122 @@
+candidate_field_nft_p4 vs field_nft_p4_NO_couplings {
+ "n": 61,
+ "mean_dlift": 0.0065252918262871966,
+ "mean_denrichment": 0.7507881462799484,
+ "wins": 14,
+ "losses": 47,
+ "ties": 0,
+ "min_lift_coupled": 0.9290138083556349,
+ "min_lift_uncoupled": 0.7268459240290226,
+ "n_frustrated": 59,
+ "mean_dlift_frustrated": 0.00692504711149488,
+ "mean_dlift_unfrustrated": -0.005267489087339483,
+ "corr_dlift_rho": -0.09221066320397517,
+ "mean_single_qubit_entropy_coupled": 0.04298705487682663,
+ "mean_total_correlation_coupled": 0.1380263098581073,
+ "worst5_dlift": [
+  [
+   -0.021924656611904125,
+   "rand49"
+  ],
+  [
+   -0.017368655484095274,
+   "rand6"
+  ],
+  [
+   -0.016343212632275117,
+   "rand58"
+  ],
+  [
+   -0.016081115990700057,
+   "rand42"
+  ],
+  [
+   -0.01605081320489854,
+   "rand39"
+  ]
+ ],
+ "best5_dlift": [
+  [
+   0.04904983980983879,
+   "rand25"
+  ],
+  [
+   0.05725212521385803,
+   "rand10"
+  ],
+  [
+   0.11531749201277952,
+   "rand36"
+  ],
+  [
+   0.14624259090057157,
+   "rand24"
+  ],
+  [
+   0.233112929470764,
+   "rand0"
+  ]
+ ]
+}
+field_nft_p1 vs field_nft_p1_NO_couplings {
+ "n": 61,
+ "mean_dlift": 0.004539811993981749,
+ "mean_denrichment": 0.6455706179066835,
+ "wins": 8,
+ "losses": 4,
+ "ties": 49,
+ "min_lift_coupled": 0.9221275856075091,
+ "min_lift_uncoupled": 0.8470621310092775,
+ "n_frustrated": 59,
+ "mean_dlift_frustrated": 0.00469370392598113,
+ "mean_dlift_unfrustrated": 0.0,
+ "corr_dlift_rho": -0.23077760193394836,
+ "mean_single_qubit_entropy_coupled": 4.542457137825216e-06,
+ "mean_total_correlation_coupled": 1.6827504082504606e-05,
+ "worst5_dlift": [
+  [
+   -0.07787241439249093,
+   "rand6"
+  ],
+  [
+   -0.054437198752480875,
+   "rand3"
+  ],
+  [
+   -0.03508002631001972,
+   "rand11"
+  ],
+  [
+   -0.013170079226257903,
+   "rand37"
+  ],
+  [
+   -6.349167956654078e-05,
+   "rand28"
+  ]
+ ],
+ "best5_dlift": [
+  [
+   0.03527336860670194,
+   "rand8"
+  ],
+  [
+   0.0356023060584606,
+   "rand55"
+  ],
+  [
+   0.06159110350727115,
+   "rand10"
+  ],
+  [
+   0.12268370607028756,
+   "rand36"
+  ],
+  [
+   0.15293786899072248,
+   "rand24"
+  ]
+ ]
+}
+current entropy 0.2292918401160151 TC 0.47421792046330197
+split_ansatz_interp_cobyqa entropy 0.22764222292134578 TC 0.5290676368912727

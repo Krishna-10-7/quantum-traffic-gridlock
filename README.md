@@ -11,7 +11,7 @@ pip install -r requirements.txt          # core needs only qiskit, numpy, scipy
 python run.py --scenario scenarios/scenario_R.json --seed 0 --out outputs/R/seed0
 ```
 
-Runtime ≈ 2 s per seed on a laptop CPU (limit: 10 min), < 300 MB RAM, no network, deterministic per seed.
+Runtime ≈ 1 s per seed on a laptop CPU (limit: 10 min), < 300 MB RAM, no network, deterministic per seed.
 
 Output files in `--out`:
 
@@ -32,7 +32,7 @@ identical to `scorer.py`. Schedule bit *i* is placed on qubit *7−i* and measur
 ## Reproduce everything
 
 ```bash
-python tests/test_pipeline.py                                               # 7 verification tests
+python tests/test_pipeline.py                                               # 9 verification tests
 python experiments/benchmark.py seeds --scenario scenarios/scenario_R.json --out outputs/R   # 5 seeds -> robustness.md
 python experiments/benchmark.py seeds --scenario scenarios/scenario_H.json --out outputs/H   # when H is released
 python experiments/benchmark.py generalization --n 100 --gen-seed 2026      # results/generalization.json
@@ -45,25 +45,33 @@ python experiments/figures.py                                               # fi
 
 | | Scenario R (5 seeds) | 100 unseen random scenarios (hidden ranges) |
 |---|---|---|
-| QAOA raw lift | **0.873 min / 0.879 mean** | 0.919 mean, 0.775 min |
-| Elite-13 enrichment (random = 1, max 19.7) | **15.4** | 17.2 |
-| Shots on the exact optimum | 41 % | 35 % mean |
-| Decoded schedule | `11101010`, cost **72.0 = C\*** | optimal in 67 %, mean excess 0.44 % |
-| Surrogate regret (QUBO minimizer) | 0 % | ≤ 5 % in 98 % of scenarios |
+| QAOA raw lift | **0.993 min / 0.994 mean** | 0.979 mean, 0.819 min |
+| Elite-13 enrichment (random = 1, max 19.69) | **19.52** | 19.28 |
+| Shots on the exact optimum | 98.5 % | 60 % mean |
+| Decoded schedule | `11101010`, cost **72.0 = C\*** | optimal in 62 %, mean excess 0.61 % |
+| Surrogate regret (QUBO minimizer) | 0 % | ≤ 5 % in 97 % of scenarios |
 
 Scenario R baselines: alternating 116.0 · greedy 92.5 · uniform random 151.25 · exact C\* 72.0 · QUBO minimizer 72.0.
+
+**Method in one line:** closed-form QUBO, i.e. the second-order expansion of each approach's exact queue recursion at the
+Webster split (176 single-approach recursions, no 256-schedule cost table), plus multi-angle QAOA (p = 4, 68 angles)
+trained with exact NFT/Rotosolve coordinate updates on a Gibbs objective, within 300 evaluations.
 
 ## Layout
 
 ```
 run.py               required entry point
 traffic_model.py     per-approach decomposition of the official dynamics, scenario generator
-qubo.py              modelling rule: weighted-L2 quadratic projection of the exact queue cost (+ exact switching)
-qaoa.py              ansatz, numpy statevector trainer, Gibbs/CVaR/energy objectives, budgeted COBYLA
+analytic_qubo.py     DEFAULT modelling rule: Webster-point second-order expansion of each approach's queue cost
+qubo.py              QUBO dispatch, Ising conversion, reference full-table projections (ablations)
+qaoa.py              multi-angle ansatz, numpy statevector, Gibbs/CVaR/energy objectives, COBYLA trainer (ablation)
+qaoa_nft.py          DEFAULT trainer: budgeted exact sequential minimal optimisation (NFT/Rotosolve)
 circuit.py           Qiskit circuit, OpenQASM 3 export, StatevectorSampler (seeded) for the 4,096 shots
 baselines.py         alternating, greedy, exact, random, QUBO-ceiling, metrics, labelled hybrid
 scorer.py            official evaluator (unmodified copy)
-experiments/         seeds, generalization, ablations, noise extension, figures
+experiments/         seeds, generalization, ablations, noise extension, figures, PDF build
+lab/                 research tracks with their own scripts + RESULTS.md: analytic_qubo, optimizer_ansatz (NFT),
+                     transfer_init, chain_extension (A->B->C, 12 qubits), shots_hardware (shot training, heavy-hex)
 tests/               independent verification
 REPORT.md            technical report (≤ 3 pages)      AI_DISCLOSURE.md  AI-use disclosure
 ```

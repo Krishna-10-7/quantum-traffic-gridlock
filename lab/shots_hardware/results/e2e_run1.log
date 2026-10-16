@@ -1,0 +1,23 @@
+si=0 cx=127 A=0.784 C=0.646 B=0.683 52s
+si=1 cx=101 A=0.827 C=0.705 B=0.686 52s
+si=2 cx=90 A=0.825 C=0.748 B=0.727 52s
+si=3 cx=66 A=0.868 C=0.686 B=0.768 37s
+si=4 cx=113 A=0.586 C=0.547 B=0.497 47s
+si=5 cx=66 A=0.955 C=0.939 B=0.941 35s
+si=6 cx=58 A=0.796 C=0.749 B=0.774 31s
+si=7 cx=100 A=0.806 C=0.764 B=0.755 52s
+si=8 cx=98 A=0.800 C=0.802 B=0.786 57s
+si=9 cx=144 A=0.791 C=0.664 B=0.645 65s
+si=10 cx=101 A=0.798 C=0.714 B=0.758 50s
+si=11 cx=94 A=0.875 C=0.819 B=0.761 57s
+si=12 cx=77 A=0.802 C=0.722 B=0.725 39s
+si=13 cx=135 A=0.820 C=0.786 B=0.805 49s
+si=14 cx=143 A=0.616 C=0.571 B=0.544 45s
+si=15 cx=144 A=0.794 C=0.688 B=0.719 45s
+si=16 cx=135 A=0.676 C=0.638 B=0.657 39s
+si=17 cx=86 A=0.845 C=0.818 B=0.789 30s
+si=18 cx=85 A=0.801 C=0.792 B=0.811 29s
+si=19 cx=87 A=0.812 C=0.770 B=0.774 28s
+A_exact_noiseless_training {"mean_lift": 0.794, "min_lift": 0.586, "mean_lift_4096": 0.79, "min_lift_4096": 0.58, "mean_enrichment_4096": 13.018, "R_lift_4096": 0.78}
+C_spsa_shots_noiseless_device {"mean_lift": 0.728, "min_lift": 0.547, "mean_lift_4096": 0.725, "min_lift_4096": 0.545, "mean_enrichment_4096": 10.091, "R_lift_4096": 0.642}
+B_spsa_shots_on_noisy_device {"mean_lift": 0.73, "min_lift": 0.497, "mean_lift_4096": 0.726, "min_lift_4096": 0.499, "mean_enrichment_4096": 10.056, "R_lift_4096": 0.68}

@@ -1,0 +1,500 @@
+{
+ "summary": {
+  "pearson_vs_adaptive": 0.9978268224786749,
+  "rel_l2_vs_adaptive": 0.08017008584609978,
+  "pearson_uniform_vs_adaptive": 0.9970381062022036,
+  "rel_l2_uniform_vs_adaptive": 0.09702136157690065,
+  "adaptive_A4B_max_over_maxJ": 7.4023592421494e-05,
+  "min_pearson_vs_adaptive": 0.9885835581714888
+ },
+ "rows": [
+  {
+   "scenario": "R",
+   "pearson_vs_adaptive": 0.9989867400076038,
+   "rel_l2_vs_adaptive": 0.07816171087791661,
+   "pearson_uniform_vs_adaptive": 0.9980176967454745,
+   "rel_l2_uniform_vs_adaptive": 0.09817256247361686,
+   "adaptive_A4B_max_over_maxJ": 0.00011210485549877491
+  },
+  {
+   "scenario": "rand0",
+   "pearson_vs_adaptive": 0.9988538594246749,
+   "rel_l2_vs_adaptive": 0.07259414652484084,
+   "pearson_uniform_vs_adaptive": 0.9977798999418215,
+   "rel_l2_uniform_vs_adaptive": 0.10413731795580337,
+   "adaptive_A4B_max_over_maxJ": 6.7598139753038515e-06
+  },
+  {
+   "scenario": "rand1",
+   "pearson_vs_adaptive": 0.9979890188382792,
+   "rel_l2_vs_adaptive": 0.05928236936971136,
+   "pearson_uniform_vs_adaptive": 0.9972753959120824,
+   "rel_l2_uniform_vs_adaptive": 0.07404618529647526,
+   "adaptive_A4B_max_over_maxJ": 5.494414367051104e-05
+  },
+  {
+   "scenario": "rand2",
+   "pearson_vs_adaptive": 0.9990967620346147,
+   "rel_l2_vs_adaptive": 0.05519612276193906,
+   "pearson_uniform_vs_adaptive": 0.9985691896668609,
+   "rel_l2_uniform_vs_adaptive": 0.08084723641706353,
+   "adaptive_A4B_max_over_maxJ": 6.117718623755766e-06
+  },
+  {
+   "scenario": "rand3",
+   "pearson_vs_adaptive": 0.9907068422328955,
+   "rel_l2_vs_adaptive": 0.1360377215720711,
+   "pearson_uniform_vs_adaptive": 0.9892413702114272,
+   "rel_l2_uniform_vs_adaptive": 0.16738122870983438,
+   "adaptive_A4B_max_over_maxJ": 2.863240634369239e-05
+  },
+  {
+   "scenario": "rand4",
+   "pearson_vs_adaptive": 0.999763693864011,
+   "rel_l2_vs_adaptive": 0.0265264956099748,
+   "pearson_uniform_vs_adaptive": 0.9990365152145794,
+   "rel_l2_uniform_vs_adaptive": 0.042632951261952746,
+   "adaptive_A4B_max_over_maxJ": 0.0
+  },
+  {
+   "scenario": "rand5",
+   "pearson_vs_adaptive": 0.9990068710058198,
+   "rel_l2_vs_adaptive": 0.05200546348134655,
+   "pearson_uniform_vs_adaptive": 0.9992733229538889,
+   "rel_l2_uniform_vs_adaptive": 0.04650288239627003,
+   "adaptive_A4B_max_over_maxJ": 7.455505763611815e-05
+  },
+  {
+   "scenario": "rand6",
+   "pearson_vs_adaptive": 0.9985286942205198,
+   "rel_l2_vs_adaptive": 0.05583061335052875,
+   "pearson_uniform_vs_adaptive": 0.9977800507224961,
+   "rel_l2_uniform_vs_adaptive": 0.06725260565376345,
+   "adaptive_A4B_max_over_maxJ": 0.00010718577105240648
+  },
+  {
+   "scenario": "rand7",
+   "pearson_vs_adaptive": 0.9985141316194119,
+   "rel_l2_vs_adaptive": 0.06486106349353009,
+   "pearson_uniform_vs_adaptive": 0.9951377834027334,
+   "rel_l2_uniform_vs_adaptive": 0.09870166152642461,
+   "adaptive_A4B_max_over_maxJ": 2.2531880386209438e-05
+  },
+  {
+   "scenario": "rand8",
+   "pearson_vs_adaptive": 0.9985793888959267,
+   "rel_l2_vs_adaptive": 0.07770843475854676,
+   "pearson_uniform_vs_adaptive": 0.9980085550275724,
+   "rel_l2_uniform_vs_adaptive": 0.09692147281056271,
+   "adaptive_A4B_max_over_maxJ": 3.6984461135648916e-05
+  },
+  {
+   "scenario": "rand9",
+   "pearson_vs_adaptive": 0.9985357126595937,
+   "rel_l2_vs_adaptive": 0.053416692902245676,
+   "pearson_uniform_vs_adaptive": 0.999001783954955,
+   "rel_l2_uniform_vs_adaptive": 0.04744978034536833,
+   "adaptive_A4B_max_over_maxJ": 5.2780858211625835e-05
+  },
+  {
+   "scenario": "rand10",
+   "pearson_vs_adaptive": 0.9961168876981851,
+   "rel_l2_vs_adaptive": 0.10524685829663186,
+   "pearson_uniform_vs_adaptive": 0.9961503593740704,
+   "rel_l2_uniform_vs_adaptive": 0.10808685644799562,
+   "adaptive_A4B_max_over_maxJ": 1.8602216694419586e-05
+  },
+  {
+   "scenario": "rand11",
+   "pearson_vs_adaptive": 0.9987410366760887,
+   "rel_l2_vs_adaptive": 0.04622931201461003,
+   "pearson_uniform_vs_adaptive": 0.9984737358557487,
+   "rel_l2_uniform_vs_adaptive": 0.06280747842734305,
+   "adaptive_A4B_max_over_maxJ": 2.8819032864972113e-05
+  },
+  {
+   "scenario": "rand12",
+   "pearson_vs_adaptive": 0.9981119314087099,
+   "rel_l2_vs_adaptive": 0.09408282665623441,
+   "pearson_uniform_vs_adaptive": 0.9960753506078408,
+   "rel_l2_uniform_vs_adaptive": 0.08878801086928739,
+   "adaptive_A4B_max_over_maxJ": 6.413463792010395e-05
+  },
+  {
+   "scenario": "rand13",
+   "pearson_vs_adaptive": 0.9963997572987475,
+   "rel_l2_vs_adaptive": 0.09595714025170432,
+   "pearson_uniform_vs_adaptive": 0.9963229521691436,
+   "rel_l2_uniform_vs_adaptive": 0.09909928579649747,
+   "adaptive_A4B_max_over_maxJ": 0.00014771409045842603
+  },
+  {
+   "scenario": "rand14",
+   "pearson_vs_adaptive": 0.999901343934718,
+   "rel_l2_vs_adaptive": 0.019339322005759264,
+   "pearson_uniform_vs_adaptive": 0.9983365491883255,
+   "rel_l2_uniform_vs_adaptive": 0.07456775649604241,
+   "adaptive_A4B_max_over_maxJ": 2.738385582695925e-05
+  },
+  {
+   "scenario": "rand15",
+   "pearson_vs_adaptive": 0.9992352165929206,
+   "rel_l2_vs_adaptive": 0.049642457426856794,
+   "pearson_uniform_vs_adaptive": 0.9990844758810447,
+   "rel_l2_uniform_vs_adaptive": 0.060663683072891356,
+   "adaptive_A4B_max_over_maxJ": 3.974615085503891e-05
+  },
+  {
+   "scenario": "rand16",
+   "pearson_vs_adaptive": 0.9982988107510101,
+   "rel_l2_vs_adaptive": 0.05277055281420851,
+   "pearson_uniform_vs_adaptive": 0.9872588459155947,
+   "rel_l2_uniform_vs_adaptive": 0.16721138336872696,
+   "adaptive_A4B_max_over_maxJ": 0.0002590604599589666
+  },
+  {
+   "scenario": "rand17",
+   "pearson_vs_adaptive": 0.9977751718342232,
+   "rel_l2_vs_adaptive": 0.08617169709135586,
+   "pearson_uniform_vs_adaptive": 0.9953919852547568,
+   "rel_l2_uniform_vs_adaptive": 0.11806263786361657,
+   "adaptive_A4B_max_over_maxJ": 0.00016141580120878303
+  },
+  {
+   "scenario": "rand18",
+   "pearson_vs_adaptive": 0.9995717933812879,
+   "rel_l2_vs_adaptive": 0.03924824707814459,
+   "pearson_uniform_vs_adaptive": 0.998779284183337,
+   "rel_l2_uniform_vs_adaptive": 0.0558243861461454,
+   "adaptive_A4B_max_over_maxJ": 5.235310188144933e-06
+  },
+  {
+   "scenario": "rand19",
+   "pearson_vs_adaptive": 0.9973696237908195,
+   "rel_l2_vs_adaptive": 0.09296053148248126,
+   "pearson_uniform_vs_adaptive": 0.997242210408267,
+   "rel_l2_uniform_vs_adaptive": 0.11383582911319536,
+   "adaptive_A4B_max_over_maxJ": 4.9719125781088225e-05
+  },
+  {
+   "scenario": "rand20",
+   "pearson_vs_adaptive": 0.9969302402355079,
+   "rel_l2_vs_adaptive": 0.09288193046346226,
+   "pearson_uniform_vs_adaptive": 0.9958449454119299,
+   "rel_l2_uniform_vs_adaptive": 0.13495700815968648,
+   "adaptive_A4B_max_over_maxJ": 6.943447205409339e-05
+  },
+  {
+   "scenario": "rand21",
+   "pearson_vs_adaptive": 0.9979845389309058,
+   "rel_l2_vs_adaptive": 0.07747345809435378,
+   "pearson_uniform_vs_adaptive": 0.9964768508392412,
+   "rel_l2_uniform_vs_adaptive": 0.1169090744863146,
+   "adaptive_A4B_max_over_maxJ": 0.0003246375577985849
+  },
+  {
+   "scenario": "rand22",
+   "pearson_vs_adaptive": 0.9994792598189263,
+   "rel_l2_vs_adaptive": 0.04251308111136044,
+   "pearson_uniform_vs_adaptive": 0.9993186380353619,
+   "rel_l2_uniform_vs_adaptive": 0.046355138434832674,
+   "adaptive_A4B_max_over_maxJ": 3.0430085690423317e-06
+  },
+  {
+   "scenario": "rand23",
+   "pearson_vs_adaptive": 0.9962810273310254,
+   "rel_l2_vs_adaptive": 0.13298245584727442,
+   "pearson_uniform_vs_adaptive": 0.9942108906883802,
+   "rel_l2_uniform_vs_adaptive": 0.1733113385647933,
+   "adaptive_A4B_max_over_maxJ": 3.005722200926834e-05
+  },
+  {
+   "scenario": "rand24",
+   "pearson_vs_adaptive": 0.9969576664133142,
+   "rel_l2_vs_adaptive": 0.07964917671826384,
+   "pearson_uniform_vs_adaptive": 0.9966427207265461,
+   "rel_l2_uniform_vs_adaptive": 0.08890438571147286,
+   "adaptive_A4B_max_over_maxJ": 0.0002484562802060833
+  },
+  {
+   "scenario": "rand25",
+   "pearson_vs_adaptive": 0.9982716613017044,
+   "rel_l2_vs_adaptive": 0.13324204677726192,
+   "pearson_uniform_vs_adaptive": 0.9942665288992912,
+   "rel_l2_uniform_vs_adaptive": 0.19521854851053633,
+   "adaptive_A4B_max_over_maxJ": 1.0763837017092825e-05
+  },
+  {
+   "scenario": "rand26",
+   "pearson_vs_adaptive": 0.9987878303710013,
+   "rel_l2_vs_adaptive": 0.05742466618589076,
+   "pearson_uniform_vs_adaptive": 0.9981326376016153,
+   "rel_l2_uniform_vs_adaptive": 0.08049800195425962,
+   "adaptive_A4B_max_over_maxJ": 0.0002516078302306977
+  },
+  {
+   "scenario": "rand27",
+   "pearson_vs_adaptive": 0.9997999718505652,
+   "rel_l2_vs_adaptive": 0.020384402708396306,
+   "pearson_uniform_vs_adaptive": 0.9991934306661627,
+   "rel_l2_uniform_vs_adaptive": 0.043300013758862055,
+   "adaptive_A4B_max_over_maxJ": 0.0
+  },
+  {
+   "scenario": "rand28",
+   "pearson_vs_adaptive": 0.9999379942000329,
+   "rel_l2_vs_adaptive": 0.011475191659868376,
+   "pearson_uniform_vs_adaptive": 0.9999801433874249,
+   "rel_l2_uniform_vs_adaptive": 0.006485425210639993,
+   "adaptive_A4B_max_over_maxJ": 0.0
+  },
+  {
+   "scenario": "rand29",
+   "pearson_vs_adaptive": 0.9997916770867559,
+   "rel_l2_vs_adaptive": 0.02262690815243153,
+   "pearson_uniform_vs_adaptive": 0.9996908090120952,
+   "rel_l2_uniform_vs_adaptive": 0.02491551568354655,
+   "adaptive_A4B_max_over_maxJ": 4.014918686849571e-06
+  },
+  {
+   "scenario": "rand30",
+   "pearson_vs_adaptive": 0.9980184523393855,
+   "rel_l2_vs_adaptive": 0.07961965784680401,
+   "pearson_uniform_vs_adaptive": 0.996250604707755,
+   "rel_l2_uniform_vs_adaptive": 0.1104160111424482,
+   "adaptive_A4B_max_over_maxJ": 0.00024639137169015944
+  },
+  {
+   "scenario": "rand31",
+   "pearson_vs_adaptive": 0.9960494077066125,
+   "rel_l2_vs_adaptive": 0.14684774835781744,
+   "pearson_uniform_vs_adaptive": 0.9961991803019844,
+   "rel_l2_uniform_vs_adaptive": 0.14808883468262313,
+   "adaptive_A4B_max_over_maxJ": 0.0
+  },
+  {
+   "scenario": "rand32",
+   "pearson_vs_adaptive": 0.9995491661135223,
+   "rel_l2_vs_adaptive": 0.053827563976838834,
+   "pearson_uniform_vs_adaptive": 0.9988449415099752,
+   "rel_l2_uniform_vs_adaptive": 0.08129206458435022,
+   "adaptive_A4B_max_over_maxJ": 1.3167100046846881e-05
+  },
+  {
+   "scenario": "rand33",
+   "pearson_vs_adaptive": 0.9989939714728833,
+   "rel_l2_vs_adaptive": 0.04427373882223249,
+   "pearson_uniform_vs_adaptive": 0.9915452964345991,
+   "rel_l2_uniform_vs_adaptive": 0.14080624781545548,
+   "adaptive_A4B_max_over_maxJ": 7.236043208982095e-05
+  },
+  {
+   "scenario": "rand34",
+   "pearson_vs_adaptive": 0.9985900798264916,
+   "rel_l2_vs_adaptive": 0.052857505493746154,
+   "pearson_uniform_vs_adaptive": 0.9969640920584164,
+   "rel_l2_uniform_vs_adaptive": 0.07758094640983175,
+   "adaptive_A4B_max_over_maxJ": 2.3336156150721522e-05
+  },
+  {
+   "scenario": "rand35",
+   "pearson_vs_adaptive": 0.9970117803753894,
+   "rel_l2_vs_adaptive": 0.08028630718171668,
+   "pearson_uniform_vs_adaptive": 0.9985671025402134,
+   "rel_l2_uniform_vs_adaptive": 0.0646765410195693,
+   "adaptive_A4B_max_over_maxJ": 6.344153261221717e-05
+  },
+  {
+   "scenario": "rand36",
+   "pearson_vs_adaptive": 0.9987839510944883,
+   "rel_l2_vs_adaptive": 0.10142751896687006,
+   "pearson_uniform_vs_adaptive": 0.9976968291178727,
+   "rel_l2_uniform_vs_adaptive": 0.12575930721207368,
+   "adaptive_A4B_max_over_maxJ": 1.622263564211787e-05
+  },
+  {
+   "scenario": "rand37",
+   "pearson_vs_adaptive": 0.9989979628632899,
+   "rel_l2_vs_adaptive": 0.06309619298724399,
+   "pearson_uniform_vs_adaptive": 0.9985368529359018,
+   "rel_l2_uniform_vs_adaptive": 0.07881405408951005,
+   "adaptive_A4B_max_over_maxJ": 0.00017111450622258692
+  },
+  {
+   "scenario": "rand38",
+   "pearson_vs_adaptive": 0.9960914011122326,
+   "rel_l2_vs_adaptive": 0.1420662683783075,
+   "pearson_uniform_vs_adaptive": 0.9956072653660418,
+   "rel_l2_uniform_vs_adaptive": 0.14382693401389463,
+   "adaptive_A4B_max_over_maxJ": 0.00015794479373330657
+  },
+  {
+   "scenario": "rand39",
+   "pearson_vs_adaptive": 0.9988444988021953,
+   "rel_l2_vs_adaptive": 0.0629178608876152,
+   "pearson_uniform_vs_adaptive": 0.9983146926894446,
+   "rel_l2_uniform_vs_adaptive": 0.06751498021506336,
+   "adaptive_A4B_max_over_maxJ": 0.00010749046072255776
+  },
+  {
+   "scenario": "rand40",
+   "pearson_vs_adaptive": 0.996998475256326,
+   "rel_l2_vs_adaptive": 0.12471316206179221,
+   "pearson_uniform_vs_adaptive": 0.9982406713257268,
+   "rel_l2_uniform_vs_adaptive": 0.13730943070534843,
+   "adaptive_A4B_max_over_maxJ": 5.942325752753697e-05
+  },
+  {
+   "scenario": "rand41",
+   "pearson_vs_adaptive": 0.9961835292059141,
+   "rel_l2_vs_adaptive": 0.12318457077878933,
+   "pearson_uniform_vs_adaptive": 0.9967188679392973,
+   "rel_l2_uniform_vs_adaptive": 0.11278249810167709,
+   "adaptive_A4B_max_over_maxJ": 0.0002226137537196577
+  },
+  {
+   "scenario": "rand42",
+   "pearson_vs_adaptive": 0.9986706646715708,
+   "rel_l2_vs_adaptive": 0.0653246694482457,
+   "pearson_uniform_vs_adaptive": 0.9969774998227681,
+   "rel_l2_uniform_vs_adaptive": 0.09303551750216561,
+   "adaptive_A4B_max_over_maxJ": 3.880212785538937e-05
+  },
+  {
+   "scenario": "rand43",
+   "pearson_vs_adaptive": 0.9974001757795132,
+   "rel_l2_vs_adaptive": 0.129830326136581,
+   "pearson_uniform_vs_adaptive": 0.9976739111027337,
+   "rel_l2_uniform_vs_adaptive": 0.10572920556756542,
+   "adaptive_A4B_max_over_maxJ": 2.797543430774506e-05
+  },
+  {
+   "scenario": "rand44",
+   "pearson_vs_adaptive": 0.9988218604879598,
+   "rel_l2_vs_adaptive": 0.061557505696340956,
+   "pearson_uniform_vs_adaptive": 0.999006979699149,
+   "rel_l2_uniform_vs_adaptive": 0.058366158534246225,
+   "adaptive_A4B_max_over_maxJ": 3.291341512921314e-05
+  },
+  {
+   "scenario": "rand45",
+   "pearson_vs_adaptive": 0.9991591485611724,
+   "rel_l2_vs_adaptive": 0.08173738362880063,
+   "pearson_uniform_vs_adaptive": 0.998528997711241,
+   "rel_l2_uniform_vs_adaptive": 0.11613149211002463,
+   "adaptive_A4B_max_over_maxJ": 6.768483751485622e-05
+  },
+  {
+   "scenario": "rand46",
+   "pearson_vs_adaptive": 0.998591999442305,
+   "rel_l2_vs_adaptive": 0.08531870297996534,
+   "pearson_uniform_vs_adaptive": 0.9982539706028842,
+   "rel_l2_uniform_vs_adaptive": 0.08885799915770498,
+   "adaptive_A4B_max_over_maxJ": 9.694036293688965e-06
+  },
+  {
+   "scenario": "rand47",
+   "pearson_vs_adaptive": 0.9991885913161854,
+   "rel_l2_vs_adaptive": 0.06545146695277645,
+   "pearson_uniform_vs_adaptive": 0.9973147138971564,
+   "rel_l2_uniform_vs_adaptive": 0.09790383867188601,
+   "adaptive_A4B_max_over_maxJ": 1.9471925694441237e-05
+  },
+  {
+   "scenario": "rand48",
+   "pearson_vs_adaptive": 0.9885835581714888,
+   "rel_l2_vs_adaptive": 0.14864679760253668,
+   "pearson_uniform_vs_adaptive": 0.9962088774765437,
+   "rel_l2_uniform_vs_adaptive": 0.09141115080138801,
+   "adaptive_A4B_max_over_maxJ": 0.00028864617941621207
+  },
+  {
+   "scenario": "rand49",
+   "pearson_vs_adaptive": 0.9974097125313519,
+   "rel_l2_vs_adaptive": 0.0801306710970808,
+   "pearson_uniform_vs_adaptive": 0.9974994545737808,
+   "rel_l2_uniform_vs_adaptive": 0.0771735525355153,
+   "adaptive_A4B_max_over_maxJ": 0.00015595665605209032
+  },
+  {
+   "scenario": "rand50",
+   "pearson_vs_adaptive": 0.9916422914403997,
+   "rel_l2_vs_adaptive": 0.1781640094594412,
+   "pearson_uniform_vs_adaptive": 0.9940646522972387,
+   "rel_l2_uniform_vs_adaptive": 0.14510691939301396,
+   "adaptive_A4B_max_over_maxJ": 6.783257326057068e-05
+  },
+  {
+   "scenario": "rand51",
+   "pearson_vs_adaptive": 0.9957782519195525,
+   "rel_l2_vs_adaptive": 0.11245627718898688,
+   "pearson_uniform_vs_adaptive": 0.9965795178735469,
+   "rel_l2_uniform_vs_adaptive": 0.10460021726528167,
+   "adaptive_A4B_max_over_maxJ": 0.00012070939253818392
+  },
+  {
+   "scenario": "rand52",
+   "pearson_vs_adaptive": 0.9979063977194392,
+   "rel_l2_vs_adaptive": 0.09085423340005419,
+   "pearson_uniform_vs_adaptive": 0.9966296488278218,
+   "rel_l2_uniform_vs_adaptive": 0.10995440479048676,
+   "adaptive_A4B_max_over_maxJ": 9.39852360858536e-05
+  },
+  {
+   "scenario": "rand53",
+   "pearson_vs_adaptive": 0.998789739864676,
+   "rel_l2_vs_adaptive": 0.06188058480302822,
+   "pearson_uniform_vs_adaptive": 0.9977264555523415,
+   "rel_l2_uniform_vs_adaptive": 0.08777938478704105,
+   "adaptive_A4B_max_over_maxJ": 7.35076545457277e-05
+  },
+  {
+   "scenario": "rand54",
+   "pearson_vs_adaptive": 0.9988555254226356,
+   "rel_l2_vs_adaptive": 0.053439163076236806,
+   "pearson_uniform_vs_adaptive": 0.9975320978895071,
+   "rel_l2_uniform_vs_adaptive": 0.07495835769240522,
+   "adaptive_A4B_max_over_maxJ": 0.0
+  },
+  {
+   "scenario": "rand55",
+   "pearson_vs_adaptive": 0.9962810918526699,
+   "rel_l2_vs_adaptive": 0.10228448969204237,
+   "pearson_uniform_vs_adaptive": 0.9962808028905168,
+   "rel_l2_uniform_vs_adaptive": 0.10550421567266376,
+   "adaptive_A4B_max_over_maxJ": 3.835736899327766e-05
+  },
+  {
+   "scenario": "rand56",
+   "pearson_vs_adaptive": 0.998304943298902,
+   "rel_l2_vs_adaptive": 0.09718855972288389,
+   "pearson_uniform_vs_adaptive": 0.9970053152108102,
+   "rel_l2_uniform_vs_adaptive": 0.13882146717039162,
+   "adaptive_A4B_max_over_maxJ": 1.1989066535761499e-05
+  },
+  {
+   "scenario": "rand57",
+   "pearson_vs_adaptive": 0.9976906485988785,
+   "rel_l2_vs_adaptive": 0.11118265458149944,
+   "pearson_uniform_vs_adaptive": 0.997160629245244,
+   "rel_l2_uniform_vs_adaptive": 0.1239985409476773,
+   "adaptive_A4B_max_over_maxJ": 1.6220398528208027e-05
+  },
+  {
+   "scenario": "rand58",
+   "pearson_vs_adaptive": 0.9977174905225641,
+   "rel_l2_vs_adaptive": 0.1011119013430537,
+   "pearson_uniform_vs_adaptive": 0.9974421185151682,
+   "rel_l2_uniform_vs_adaptive": 0.10757676190568502,
+   "adaptive_A4B_max_over_maxJ": 4.453032357946714e-05
+  },
+  {
+   "scenario": "rand59",
+   "pearson_vs_adaptive": 0.9982262477193765,
+   "rel_l2_vs_adaptive": 0.10477464652355546,
+   "pearson_uniform_vs_adaptive": 0.9979575303586623,
+   "rel_l2_uniform_vs_adaptive": 0.11867837877013195,
+   "adaptive_A4B_max_over_maxJ": 7.213736360255223e-06
+  }
+ ]
+}

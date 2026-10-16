@@ -1,0 +1,4 @@
+transfer+ramp                                 lift 0.9460 (min 0.852) enr 18.21 (min 9.24) P(opt) 0.437 f 0.1068 evals 300 (199s)
+transfer_base (std ansatz) + stage1/2         lift 0.9319 (min 0.822) enr 17.85 (min 10.53) P(opt) 0.384 f 0.1348 evals 300 (178s)
+transfer + scale global3 (20)                 lift 0.9452 (min 0.801) enr 18.24 (min 9.29) P(opt) 0.437 f 0.1092 evals 300 (193s)
+transfer + scale layer12 (40)                 lift 0.9441 (min 0.865) enr 18.27 (min 10.77) P(opt) 0.433 f 0.1085 evals 300 (168s)

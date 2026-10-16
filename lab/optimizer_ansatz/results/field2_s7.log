@@ -1,0 +1,14 @@
+field-nft p=4 (gen8, s1=40)                lift 0.9782 (min 0.906)  enr 19.34 (min 18.74)  P(opt) 0.611  f 0.0225  evals<=300  drift 9.1e-16  1.01s
+field-nft p=1 (s1=15)                      lift 0.9890 (min 0.919)  enr 19.69 (min 19.69)  P(opt) 0.537  f 0.0094  evals<=300  drift 4.7e-16  0.43s
+field-nft p=2 (s1=20)                      lift 0.9870 (min 0.933)  enr 19.56 (min 18.47)  P(opt) 0.631  f 0.0096  evals<=300  drift 5.6e-16  0.60s
+field-nft p=1 eta=4                        lift 0.9890 (min 0.919)  enr 19.69 (min 19.69)  P(opt) 0.537  f 0.0187  evals<=300  drift 5.6e-16  0.47s
+field-nft p=1 eta=1                        lift 0.9862 (min 0.839)  enr 19.69 (min 19.68)  P(opt) 0.550  f 0.0083  evals<=300  drift 4.4e-16  0.54s
+field-nft p=1 energy obj                   lift 0.9786 (min 0.792)  enr 19.49 (min 11.77)  P(opt) 0.513  f 147.9684  evals<=300  drift 1.1e-13  0.55s
+field-nft grow 1->4 at (60, 120, 180)      lift 0.9419 (min 0.755)  enr 18.56 (min 12.93)  P(opt) 0.489  f 0.0665  evals<=300  drift 1.3e-15  0.81s
+field-nft grow 1->4 at (120, 180, 240)     lift 0.9727 (min 0.809)  enr 19.30 (min 15.24)  P(opt) 0.526  f 0.0276  evals<=300  drift 1.8e-15  0.56s
+field-nft grow 1->4 at (150, 200, 250)     lift 0.9812 (min 0.838)  enr 19.50 (min 16.26)  P(opt) 0.533  f 0.0179  evals<=300  drift 5.6e-16  0.61s
+field-nft p=1 NO couplings                 lift 0.9857 (min 0.839)  enr 19.69 (min 19.69)  P(opt) 0.550  f 0.0351  evals<=300  drift 4.4e-16  0.46s
+split-nft p=4 gen16 rho0.1                 lift 0.9181 (min 0.787)  enr 17.02 (min 10.56)  P(opt) 0.347  f 0.1711  evals<=300  drift 5.3e-16  1.14s
+field cobyqa p=4 rho0.075                  lift 0.9226 (min 0.818)  enr 17.42 (min 11.05)  P(opt) 0.346  f 0.1540  evals<=299  drift 0.0e+00  5.44s
+field cobyqa p=1 rho0.075                  lift 0.9248 (min 0.629)  enr 16.97 (min 1.77)  P(opt) 0.404  f 0.1499  evals<=299  drift 0.0e+00  2.12s
+current                                    lift 0.9037 (min 0.771)  enr 16.47 (min 9.83)  P(opt) 0.311  f 0.2013  evals<=300  drift 0.0e+00  2.73s

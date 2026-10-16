@@ -1,0 +1,65 @@
+{
+ "name": "chain1001_6",
+ "arrivals": {
+  "A": {
+   "NS": [
+    1,
+    0,
+    6,
+    3
+   ],
+   "EW": [
+    6,
+    3,
+    5,
+    7
+   ]
+  },
+  "B": {
+   "NS": [
+    1,
+    3,
+    6,
+    8
+   ],
+   "EW": [
+    7,
+    1,
+    0,
+    7
+   ]
+  },
+  "C": {
+   "NS": [
+    1,
+    7,
+    1,
+    2
+   ],
+   "EW": [
+    0,
+    1,
+    5,
+    0
+   ]
+  }
+ },
+ "service_capacity": 6,
+ "storage_capacity": 6,
+ "overflow_weight": 4.5,
+ "switch_weight": 0.5,
+ "links": [
+  {
+   "from": "A",
+   "to": "B",
+   "phase": "NS",
+   "fraction": 0.8
+  },
+  {
+   "from": "B",
+   "to": "C",
+   "phase": "EW",
+   "fraction": 0.8
+  }
+ ]
+}

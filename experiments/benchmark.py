@@ -138,15 +138,18 @@ def cmd_generalization(a):
 
 # ------------------------------------------------------------------ ablations
 ABLATIONS = [
-    ('final (p=4, split cost, per-qubit mixer, Gibbs, adaptive QUBO)', {}),
+    ('final (Webster QUBO, p=4 field/per-qubit multi-angle QAOA, Gibbs, NFT trainer)', {}),
     ('depth p=1', {'p': 1}), ('depth p=2', {'p': 2}), ('depth p=3', {'p': 3}),
-    ('standard QAOA ansatz (1 gamma, 1 beta per layer)', {'cost_mode': 'single', 'mixer_mode': 'single'}),
-    ('per-qubit mixer only (1 gamma per layer)', {'cost_mode': 'single'}),
+    ('no ZZ couplings in circuit (product-state ansatz)', {'no_couplings': True}),
+    ('previous submission: split cost, COBYLA trainer', {'trainer': 'cobyla', 'cost_mode': 'split', 'stage1_evals': 40}),
+    ('standard QAOA ansatz, COBYLA', {'trainer': 'cobyla', 'cost_mode': 'single', 'mixer_mode': 'single'}),
+    ('field ansatz, COBYLA trainer', {'trainer': 'cobyla'}),
     ('objective <E> (standard)', {'kind': 'energy'}),
-    ('objective CVaR alpha=0.25', {'kind': 'cvar'}),
+    ('objective CVaR alpha=0.25 (COBYLA)', {'kind': 'cvar'}),
     ('Gibbs eta=1', {'eta': 1.0}), ('Gibbs eta=4', {'eta': 4.0}),
+    ('QUBO: adaptive projection of full cost table', {'measure': 'adaptive'}),
     ('QUBO: uniform Walsh projection', {'measure': 'uniform'}),
-    ('QUBO: adaptive kappa=0.5', {'kappa': 0.5}), ('QUBO: adaptive kappa=2', {'kappa': 2.0}),
+    ('QUBO: pairwise physics only (all-red expansion)', {'measure': 'red'}),
     ('init: random angles (3 probes)', {'init': 'random'}),
     ('init: near-identity', {'init': 'small'}),
     ('budget 100 evaluations', {'max_evals': 100}), ('budget 200 evaluations', {'max_evals': 200}),

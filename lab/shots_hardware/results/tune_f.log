@@ -1,0 +1,8 @@
+N=1024 {'method': 'cobyla'}  lift 0.717 (min 0.562, p10 0.620)  enr 9.01  56s
+N=1024 {'method': 'cobyla', 'rhobeg': 0.3, 'rho2': 0.3, 'tol': 0.02}  lift 0.776 (min 0.598, p10 0.665)  enr 11.53  40s
+N=1024 {'method': 'cobyla', 'reeval': 20}  lift 0.717 (min 0.562, p10 0.620)  enr 9.02  47s
+N=1024 {'method': 'spsa', 'spsa_a': 0.6, 'spsa_c': 0.1, 'select': 'last'}  lift 0.826 (min 0.662, p10 0.712)  enr 13.34  18s
+N=4096 {'method': 'cobyla'}  lift 0.727 (min 0.569, p10 0.620)  enr 9.42  43s
+N=4096 {'method': 'cobyla', 'rhobeg': 0.3, 'rho2': 0.3, 'tol': 0.02}  lift 0.824 (min 0.638, p10 0.720)  enr 13.24  39s
+N=4096 {'method': 'cobyla', 'reeval': 20}  lift 0.727 (min 0.569, p10 0.620)  enr 9.43  38s
+N=4096 {'method': 'spsa', 'spsa_a': 0.6, 'spsa_c': 0.1, 'select': 'last'}  lift 0.824 (min 0.641, p10 0.728)  enr 13.81  16s

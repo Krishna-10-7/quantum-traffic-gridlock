@@ -1,0 +1,2212 @@
+{
+ "adaptive": {
+  "mean_regret": 0.0045227479265262365,
+  "max_regret": 0.052132701421800945,
+  "frac_le_5pct": 0.9836065573770492,
+  "frac_zero": 0.7213114754098361,
+  "regret_points_of_10": 9.998251884080492,
+  "mean_pearson": 0.9889257839972122,
+  "min_pearson": 0.9680283481781029,
+  "mean_spearman": 0.9922120594426455,
+  "mean_couplings": 27.0,
+  "R_regret": 0.0,
+  "R_pearson": 0.9930821426015876,
+  "rows": [
+   {
+    "scenario": "R",
+    "regret": 0.0,
+    "pearson": 0.9930821426015876,
+    "spearman": 0.9965781643396656,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand0",
+    "regret": 0.0,
+    "pearson": 0.9939085592646557,
+    "spearman": 0.9974035820553899,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand1",
+    "regret": 0.008771929824561403,
+    "pearson": 0.9902609932190606,
+    "spearman": 0.9914733062485692,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand2",
+    "regret": 0.0,
+    "pearson": 0.9931382139167473,
+    "spearman": 0.9944759956511785,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand3",
+    "regret": 0.0,
+    "pearson": 0.9680283481781029,
+    "spearman": 0.9816741531242845,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand4",
+    "regret": 0.0,
+    "pearson": 0.9960152067491241,
+    "spearman": 0.9964987697413594,
+    "couplings": 12
+   },
+   {
+    "scenario": "rand5",
+    "regret": 0.0,
+    "pearson": 0.9950129256016559,
+    "spearman": 0.9933916514076446,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand6",
+    "regret": 0.0,
+    "pearson": 0.9856904902322396,
+    "spearman": 0.9842634184023802,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand7",
+    "regret": 0.052132701421800945,
+    "pearson": 0.990096960193474,
+    "spearman": 0.9946691176470587,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand8",
+    "regret": 0.0,
+    "pearson": 0.9897485810870775,
+    "spearman": 0.9943894483863582,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand9",
+    "regret": 0.0,
+    "pearson": 0.9915991139167424,
+    "spearman": 0.9932192721446552,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand10",
+    "regret": 0.0036231884057971015,
+    "pearson": 0.9899422459565137,
+    "spearman": 0.9947284847791257,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand11",
+    "regret": 0.0,
+    "pearson": 0.9938139448182634,
+    "spearman": 0.9954251544975966,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand12",
+    "regret": 0.007547169811320755,
+    "pearson": 0.9871794911099241,
+    "spearman": 0.990248054474708,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand13",
+    "regret": 0.0,
+    "pearson": 0.9867640106935472,
+    "spearman": 0.9900656614785991,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand14",
+    "regret": 0.0,
+    "pearson": 0.994898535009332,
+    "spearman": 0.9969129091325245,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand15",
+    "regret": 0.011574074074074073,
+    "pearson": 0.9934834681539333,
+    "spearman": 0.9946684023804071,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand16",
+    "regret": 0.0,
+    "pearson": 0.9710557662563525,
+    "spearman": 0.9840438315403981,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand17",
+    "regret": 0.0,
+    "pearson": 0.9819851764809417,
+    "spearman": 0.9852347505149919,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand18",
+    "regret": 0.0,
+    "pearson": 0.9971050385975203,
+    "spearman": 0.9981696326390477,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand19",
+    "regret": 0.006648936170212766,
+    "pearson": 0.984281096211453,
+    "spearman": 0.9886358434424352,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand20",
+    "regret": 0.0,
+    "pearson": 0.9765210560549094,
+    "spearman": 0.9799625200274662,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand21",
+    "regret": 0.0,
+    "pearson": 0.9882109622506897,
+    "spearman": 0.9924496452277406,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand22",
+    "regret": 0.0,
+    "pearson": 0.994811531890986,
+    "spearman": 0.9940733005264362,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand23",
+    "regret": 0.011320754716981131,
+    "pearson": 0.9832876744461475,
+    "spearman": 0.9952019913023573,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand24",
+    "regret": 0.0,
+    "pearson": 0.990957440324465,
+    "spearman": 0.9930039768825816,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand25",
+    "regret": 0.0,
+    "pearson": 0.9790616792637059,
+    "spearman": 0.9934417200732432,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand26",
+    "regret": 0.0,
+    "pearson": 0.9918627592260374,
+    "spearman": 0.9935125314717325,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand27",
+    "regret": 0.0,
+    "pearson": 0.9971596733427346,
+    "spearman": 0.9975731002517736,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand28",
+    "regret": 0.0,
+    "pearson": 0.9997034993792442,
+    "spearman": 0.9984757667658501,
+    "couplings": 7
+   },
+   {
+    "scenario": "rand29",
+    "regret": 0.00398406374501992,
+    "pearson": 0.9990450934247748,
+    "spearman": 0.998814087891966,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand30",
+    "regret": 0.024390243902439025,
+    "pearson": 0.9889428297593923,
+    "spearman": 0.995076819638361,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand31",
+    "regret": 0.0,
+    "pearson": 0.9869067858840306,
+    "spearman": 0.9912837605859464,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand32",
+    "regret": 0.034653465346534656,
+    "pearson": 0.9936657663056349,
+    "spearman": 0.9957320038910503,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand33",
+    "regret": 0.002583979328165375,
+    "pearson": 0.984210757710754,
+    "spearman": 0.9907458800640877,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand34",
+    "regret": 0.0,
+    "pearson": 0.988867599244729,
+    "spearman": 0.9893203536278322,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand35",
+    "regret": 0.0,
+    "pearson": 0.9883559126473619,
+    "spearman": 0.9882345788509955,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand36",
+    "regret": 0.0,
+    "pearson": 0.9898742245974771,
+    "spearman": 0.9948743991760125,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand37",
+    "regret": 0.005154639175257732,
+    "pearson": 0.9943928821878801,
+    "spearman": 0.9963120851453421,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand38",
+    "regret": 0.018691588785046728,
+    "pearson": 0.9862164472508435,
+    "spearman": 0.9933244163424123,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand39",
+    "regret": 0.0,
+    "pearson": 0.9902723254274424,
+    "spearman": 0.98998483634699,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand40",
+    "regret": 0.0,
+    "pearson": 0.9838256016384095,
+    "spearman": 0.9910341325246049,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand41",
+    "regret": 0.015151515151515152,
+    "pearson": 0.9892698956118352,
+    "spearman": 0.9941112096589606,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand42",
+    "regret": 0.0,
+    "pearson": 0.9840111725852233,
+    "spearman": 0.9879749370565345,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand43",
+    "regret": 0.0,
+    "pearson": 0.9880481378051436,
+    "spearman": 0.9897738326848248,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand44",
+    "regret": 0.0,
+    "pearson": 0.9943070043744076,
+    "spearman": 0.9956325818265047,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand45",
+    "regret": 0.029333333333333333,
+    "pearson": 0.9899105447462577,
+    "spearman": 0.9885736152437627,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand46",
+    "regret": 0.0,
+    "pearson": 0.9927362017887469,
+    "spearman": 0.9957813572899975,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand47",
+    "regret": 0.0,
+    "pearson": 0.9922734408891671,
+    "spearman": 0.9962813286793315,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand48",
+    "regret": 0.0,
+    "pearson": 0.9793442983545888,
+    "spearman": 0.9802707999542226,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand49",
+    "regret": 0.0,
+    "pearson": 0.9857347994229635,
+    "spearman": 0.982654068436713,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand50",
+    "regret": 0.0,
+    "pearson": 0.9824521298820096,
+    "spearman": 0.9920655470359349,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand51",
+    "regret": 0.0,
+    "pearson": 0.9879411380085736,
+    "spearman": 0.9906314373998624,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand52",
+    "regret": 0.023809523809523808,
+    "pearson": 0.9876888440125032,
+    "spearman": 0.9919961661707483,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand53",
+    "regret": 0.0,
+    "pearson": 0.9946104342362487,
+    "spearman": 0.997043802929732,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand54",
+    "regret": 0.0,
+    "pearson": 0.9924309367020958,
+    "spearman": 0.9943250743877315,
+    "couplings": 16
+   },
+   {
+    "scenario": "rand55",
+    "regret": 0.016516516516516516,
+    "pearson": 0.9892014690650193,
+    "spearman": 0.9933637560082397,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand56",
+    "regret": 0.0,
+    "pearson": 0.9869387787925642,
+    "spearman": 0.9923359178301671,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand57",
+    "regret": 0.0,
+    "pearson": 0.9893439498638361,
+    "spearman": 0.9942599851224535,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand58",
+    "regret": 0.0,
+    "pearson": 0.9873027762974922,
+    "spearman": 0.9876580739299609,
+    "couplings": 28
+   },
+   {
+    "scenario": "rand59",
+    "regret": 0.0,
+    "pearson": 0.9876840608853709,
+    "spearman": 0.99160062371252,
+    "couplings": 28
+   }
+  ]
+ },
+ "webster": {
+  "mean_regret": 0.007640994052090004,
+  "max_regret": 0.052132701421800945,
+  "frac_le_5pct": 0.9836065573770492,
+  "frac_zero": 0.5901639344262295,
+  "regret_points_of_10": 9.998251884080492,
+  "mean_pearson": 0.9901135227958641,
+  "min_pearson": 0.9688192823964029,
+  "mean_spearman": 0.9901638406207668,
+  "mean_couplings": 22.81967213114754,
+  "R_regret": 0.0,
+  "R_pearson": 0.9942295161569178,
+  "rows": [
+   {
+    "scenario": "R",
+    "regret": 0.0,
+    "pearson": 0.9942295161569178,
+    "spearman": 0.9958586060883495,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand0",
+    "regret": 0.0,
+    "pearson": 0.9946847423036891,
+    "spearman": 0.9956561856260012,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand1",
+    "regret": 0.008771929824561403,
+    "pearson": 0.9886178670761141,
+    "spearman": 0.9898889906157012,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand2",
+    "regret": 0.0,
+    "pearson": 0.994017946822053,
+    "spearman": 0.9930611982146943,
+    "couplings": 20
+   },
+   {
+    "scenario": "rand3",
+    "regret": 0.01991150442477876,
+    "pearson": 0.9751960632462408,
+    "spearman": 0.9750178816662851,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand4",
+    "regret": 0.0,
+    "pearson": 0.9954587391543733,
+    "spearman": 0.9959716182192719,
+    "couplings": 12
+   },
+   {
+    "scenario": "rand5",
+    "regret": 0.007462686567164179,
+    "pearson": 0.9954208943655466,
+    "spearman": 0.9932164110780497,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand6",
+    "regret": 0.0,
+    "pearson": 0.9864316792326921,
+    "spearman": 0.9852590695811397,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand7",
+    "regret": 0.052132701421800945,
+    "pearson": 0.9922619242076457,
+    "spearman": 0.9931084058136871,
+    "couplings": 20
+   },
+   {
+    "scenario": "rand8",
+    "regret": 0.0,
+    "pearson": 0.9895397980339532,
+    "spearman": 0.9926778152895397,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand9",
+    "regret": 0.0,
+    "pearson": 0.9921308288024887,
+    "spearman": 0.9924081597619591,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand10",
+    "regret": 0.021739130434782608,
+    "pearson": 0.9928288159284175,
+    "spearman": 0.9934352826733805,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand11",
+    "regret": 0.0,
+    "pearson": 0.9930658020747755,
+    "spearman": 0.9944337949187455,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand12",
+    "regret": 0.007547169811320755,
+    "pearson": 0.9882346697397467,
+    "spearman": 0.9874735351338978,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand13",
+    "regret": 0.0,
+    "pearson": 0.9899029215586292,
+    "spearman": 0.9895664053559164,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand14",
+    "regret": 0.0,
+    "pearson": 0.9949445321202423,
+    "spearman": 0.9964222362096588,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand15",
+    "regret": 0.011574074074074073,
+    "pearson": 0.9937093553446819,
+    "spearman": 0.9940969043259325,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand16",
+    "regret": 0.01079136690647482,
+    "pearson": 0.9688192823964029,
+    "spearman": 0.9837813286793315,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand17",
+    "regret": 0.0,
+    "pearson": 0.9834085101638248,
+    "spearman": 0.9801170176241703,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand18",
+    "regret": 0.003875968992248062,
+    "pearson": 0.9973070018892145,
+    "spearman": 0.9975516422522315,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand19",
+    "regret": 0.013297872340425532,
+    "pearson": 0.9859514660847052,
+    "spearman": 0.9868648432135498,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand20",
+    "regret": 0.0,
+    "pearson": 0.9781420798995848,
+    "spearman": 0.9767524032959485,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand21",
+    "regret": 0.0,
+    "pearson": 0.9895883536899942,
+    "spearman": 0.9909368562600135,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand22",
+    "regret": 0.0,
+    "pearson": 0.9949733877321886,
+    "spearman": 0.9932135500114441,
+    "couplings": 20
+   },
+   {
+    "scenario": "rand23",
+    "regret": 0.011320754716981131,
+    "pearson": 0.9869311331105743,
+    "spearman": 0.9885128175783932,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand24",
+    "regret": 0.0,
+    "pearson": 0.9928180845717373,
+    "spearman": 0.9921506637674524,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand25",
+    "regret": 0.0,
+    "pearson": 0.9821839480616295,
+    "spearman": 0.9892895971618217,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand26",
+    "regret": 0.0,
+    "pearson": 0.9921687454107084,
+    "spearman": 0.9927400434882123,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand27",
+    "regret": 0.0,
+    "pearson": 0.9970132866155884,
+    "spearman": 0.997140363927672,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand28",
+    "regret": 0.0,
+    "pearson": 0.9996871560261584,
+    "spearman": 0.9972626745250629,
+    "couplings": 7
+   },
+   {
+    "scenario": "rand29",
+    "regret": 0.00398406374501992,
+    "pearson": 0.9992003364463001,
+    "spearman": 0.9986345559624628,
+    "couplings": 18
+   },
+   {
+    "scenario": "rand30",
+    "regret": 0.024390243902439025,
+    "pearson": 0.990773702843619,
+    "spearman": 0.9936613069352254,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand31",
+    "regret": 0.0,
+    "pearson": 0.9886223060628477,
+    "spearman": 0.9862397001602196,
+    "couplings": 18
+   },
+   {
+    "scenario": "rand32",
+    "regret": 0.034653465346534656,
+    "pearson": 0.9941608458949609,
+    "spearman": 0.9947907129777979,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand33",
+    "regret": 0.002583979328165375,
+    "pearson": 0.9830906262443669,
+    "spearman": 0.9895098992904553,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand34",
+    "regret": 0.0,
+    "pearson": 0.9908913023962754,
+    "spearman": 0.987228198672465,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand35",
+    "regret": 0.009771986970684038,
+    "pearson": 0.9894459873346609,
+    "spearman": 0.9874413481345845,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand36",
+    "regret": 0.0,
+    "pearson": 0.9913926552869183,
+    "spearman": 0.9926699473563743,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand37",
+    "regret": 0.041237113402061855,
+    "pearson": 0.9952449834340577,
+    "spearman": 0.9949616617074843,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand38",
+    "regret": 0.018691588785046728,
+    "pearson": 0.9893329797139896,
+    "spearman": 0.989360408560311,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand39",
+    "regret": 0.0,
+    "pearson": 0.9914265777998464,
+    "spearman": 0.9902788109407186,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand40",
+    "regret": 0.0,
+    "pearson": 0.9841686989270542,
+    "spearman": 0.9873877031357287,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand41",
+    "regret": 0.015151515151515152,
+    "pearson": 0.9921357677369382,
+    "spearman": 0.9911042286564431,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand42",
+    "regret": 0.0,
+    "pearson": 0.9872619681943106,
+    "spearman": 0.9878411821927214,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand43",
+    "regret": 0.022072936660268713,
+    "pearson": 0.9893388787095269,
+    "spearman": 0.986836947814145,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand44",
+    "regret": 0.0,
+    "pearson": 0.995187262084373,
+    "spearman": 0.9956175612268252,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand45",
+    "regret": 0.029333333333333333,
+    "pearson": 0.9905142859132072,
+    "spearman": 0.9866409647516592,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand46",
+    "regret": 0.006060606060606061,
+    "pearson": 0.9940825197409591,
+    "spearman": 0.9945274948500801,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand47",
+    "regret": 0.0,
+    "pearson": 0.9939091914756975,
+    "spearman": 0.9953343156328678,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand48",
+    "regret": 0.0,
+    "pearson": 0.973869710968363,
+    "spearman": 0.9683501659418629,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand49",
+    "regret": 0.04941860465116279,
+    "pearson": 0.9874674502842018,
+    "spearman": 0.9809367132066833,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand50",
+    "regret": 0.0,
+    "pearson": 0.9857519102055945,
+    "spearman": 0.9850537880521857,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand51",
+    "regret": 0.0,
+    "pearson": 0.9901987308418962,
+    "spearman": 0.9889899004348819,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand52",
+    "regret": 0.023809523809523808,
+    "pearson": 0.9905628366981519,
+    "spearman": 0.9908660448615242,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand53",
+    "regret": 0.0,
+    "pearson": 0.9954343423263514,
+    "spearman": 0.9955903810940717,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand54",
+    "regret": 0.0,
+    "pearson": 0.9928376347771749,
+    "spearman": 0.9920898661020827,
+    "couplings": 16
+   },
+   {
+    "scenario": "rand55",
+    "regret": 0.016516516516516516,
+    "pearson": 0.9925014439041928,
+    "spearman": 0.9888153753719384,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand56",
+    "regret": 0.0,
+    "pearson": 0.9883886750824868,
+    "spearman": 0.988684481574731,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand57",
+    "regret": 0.0,
+    "pearson": 0.9914615723165137,
+    "spearman": 0.9920004577706567,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand58",
+    "regret": 0.0,
+    "pearson": 0.9887042105894103,
+    "spearman": 0.9843835831998167,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand59",
+    "regret": 0.0,
+    "pearson": 0.9898969644929287,
+    "spearman": 0.9903002689402607,
+    "couplings": 24
+   }
+  ]
+ },
+ "uniform": {
+  "mean_regret": 0.010778810547654031,
+  "max_regret": 0.11848341232227488,
+  "frac_le_5pct": 0.9672131147540983,
+  "frac_zero": 0.5737704918032787,
+  "regret_points_of_10": 9.894492104266627,
+  "mean_pearson": 0.9916713372834184,
+  "min_pearson": 0.9774754358002116,
+  "mean_spearman": 0.9902062758668562,
+  "mean_couplings": 22.78688524590164,
+  "R_regret": 0.0,
+  "R_pearson": 0.9948541153701416,
+  "rows": [
+   {
+    "scenario": "R",
+    "regret": 0.0,
+    "pearson": 0.9948541153701416,
+    "spearman": 0.99516265163653,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand0",
+    "regret": 0.11023622047244094,
+    "pearson": 0.996010575694595,
+    "spearman": 0.9944774261844813,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand1",
+    "regret": 0.008771929824561403,
+    "pearson": 0.9922391326414819,
+    "spearman": 0.9903260185397115,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand2",
+    "regret": 0.0,
+    "pearson": 0.9946409970796178,
+    "spearman": 0.9927872510872052,
+    "couplings": 20
+   },
+   {
+    "scenario": "rand3",
+    "regret": 0.01327433628318584,
+    "pearson": 0.9774754358002116,
+    "spearman": 0.9736302643625543,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand4",
+    "regret": 0.0,
+    "pearson": 0.9969195882318139,
+    "spearman": 0.9961790455481803,
+    "couplings": 12
+   },
+   {
+    "scenario": "rand5",
+    "regret": 0.0,
+    "pearson": 0.9957970669501346,
+    "spearman": 0.9936813344014648,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand6",
+    "regret": 0.0,
+    "pearson": 0.9878440376208013,
+    "spearman": 0.9847412165255206,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand7",
+    "regret": 0.11848341232227488,
+    "pearson": 0.9939351647147114,
+    "spearman": 0.9921113241016248,
+    "couplings": 20
+   },
+   {
+    "scenario": "rand8",
+    "regret": 0.04,
+    "pearson": 0.9911111920879467,
+    "spearman": 0.992455367360952,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand9",
+    "regret": 0.0,
+    "pearson": 0.9927167766935215,
+    "spearman": 0.9927522030212863,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand10",
+    "regret": 0.021739130434782608,
+    "pearson": 0.9930957238522188,
+    "spearman": 0.9937378404669258,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand11",
+    "regret": 0.0,
+    "pearson": 0.9949764428010188,
+    "spearman": 0.9952985523002974,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand12",
+    "regret": 0.007547169811320755,
+    "pearson": 0.9910556643853141,
+    "spearman": 0.9874628061341266,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand13",
+    "regret": 0.0,
+    "pearson": 0.9902612692943908,
+    "spearman": 0.9896021686884869,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand14",
+    "regret": 0.0,
+    "pearson": 0.9965740325546186,
+    "spearman": 0.9947570954451819,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand15",
+    "regret": 0.011574074074074073,
+    "pearson": 0.9944318076943381,
+    "spearman": 0.9940954737926296,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand16",
+    "regret": 0.01079136690647482,
+    "pearson": 0.9820846123351858,
+    "spearman": 0.9795583943694208,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand17",
+    "regret": 0.0,
+    "pearson": 0.986542155867321,
+    "spearman": 0.9811527237354084,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand18",
+    "regret": 0.003875968992248062,
+    "pearson": 0.9983230894958816,
+    "spearman": 0.9979357404440374,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand19",
+    "regret": 0.013297872340425532,
+    "pearson": 0.987248050281792,
+    "spearman": 0.9879134241245134,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand20",
+    "regret": 0.0,
+    "pearson": 0.9809107512838731,
+    "spearman": 0.9764777409018082,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand21",
+    "regret": 0.0,
+    "pearson": 0.9924962931399111,
+    "spearman": 0.9912887674525062,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand22",
+    "regret": 0.0,
+    "pearson": 0.9958595840861181,
+    "spearman": 0.9937314030670631,
+    "couplings": 20
+   },
+   {
+    "scenario": "rand23",
+    "regret": 0.011320754716981131,
+    "pearson": 0.9879685376985975,
+    "spearman": 0.9862275406271456,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand24",
+    "regret": 0.0,
+    "pearson": 0.9932418476867825,
+    "spearman": 0.9922493705653466,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand25",
+    "regret": 0.0,
+    "pearson": 0.9847090100809117,
+    "spearman": 0.9840373941405354,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand26",
+    "regret": 0.0,
+    "pearson": 0.9937447712763136,
+    "spearman": 0.9946798466468296,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand27",
+    "regret": 0.0,
+    "pearson": 0.9979717609778265,
+    "spearman": 0.9978735122453649,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand28",
+    "regret": 0.0,
+    "pearson": 0.9997243219646464,
+    "spearman": 0.9983963721675441,
+    "couplings": 7
+   },
+   {
+    "scenario": "rand29",
+    "regret": 0.00398406374501992,
+    "pearson": 0.99934198688837,
+    "spearman": 0.9987153810940718,
+    "couplings": 18
+   },
+   {
+    "scenario": "rand30",
+    "regret": 0.024390243902439025,
+    "pearson": 0.9918369002823306,
+    "spearman": 0.9933859292744333,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand31",
+    "regret": 0.0,
+    "pearson": 0.9901328580291602,
+    "spearman": 0.9886258297093153,
+    "couplings": 18
+   },
+   {
+    "scenario": "rand32",
+    "regret": 0.034653465346534656,
+    "pearson": 0.9950234020074875,
+    "spearman": 0.9940310997940031,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand33",
+    "regret": 0.002583979328165375,
+    "pearson": 0.9898204123199302,
+    "spearman": 0.9880965323872738,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand34",
+    "regret": 0.0,
+    "pearson": 0.9914849072233719,
+    "spearman": 0.984826333257038,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand35",
+    "regret": 0.0,
+    "pearson": 0.9903277626531083,
+    "spearman": 0.9881623369192033,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand36",
+    "regret": 0.0,
+    "pearson": 0.9921729430473196,
+    "spearman": 0.9910427157244218,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand37",
+    "regret": 0.041237113402061855,
+    "pearson": 0.9958149075371254,
+    "spearman": 0.994445239185168,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand38",
+    "regret": 0.018691588785046728,
+    "pearson": 0.9897376438154165,
+    "spearman": 0.9899497882810709,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand39",
+    "regret": 0.0,
+    "pearson": 0.9920120928622587,
+    "spearman": 0.9915777351796747,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand40",
+    "regret": 0.0,
+    "pearson": 0.9856021739424644,
+    "spearman": 0.9879427500572211,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand41",
+    "regret": 0.015151515151515152,
+    "pearson": 0.9925256593593438,
+    "spearman": 0.9918066205081252,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand42",
+    "regret": 0.0,
+    "pearson": 0.9881597070005589,
+    "spearman": 0.9869606889448385,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand43",
+    "regret": 0.02399232245681382,
+    "pearson": 0.9903493179456087,
+    "spearman": 0.987243934538796,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand44",
+    "regret": 0.0,
+    "pearson": 0.9952618487624976,
+    "spearman": 0.9956390192263675,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand45",
+    "regret": 0.029333333333333333,
+    "pearson": 0.9915146698218834,
+    "spearman": 0.9863097962920576,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand46",
+    "regret": 0.006060606060606061,
+    "pearson": 0.9944880813565217,
+    "spearman": 0.994581855115587,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand47",
+    "regret": 0.0,
+    "pearson": 0.9949280470473867,
+    "spearman": 0.9939953364614328,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand48",
+    "regret": 0.0,
+    "pearson": 0.9829832443809295,
+    "spearman": 0.9795505264362552,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand49",
+    "regret": 0.0,
+    "pearson": 0.9883966892262551,
+    "spearman": 0.9807156958113983,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand50",
+    "regret": 0.0,
+    "pearson": 0.987572360504443,
+    "spearman": 0.9880006866559853,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand51",
+    "regret": 0.0,
+    "pearson": 0.9904040302594768,
+    "spearman": 0.9897631036850536,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand52",
+    "regret": 0.023809523809523808,
+    "pearson": 0.9911705724059395,
+    "spearman": 0.9899869821469442,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand53",
+    "regret": 0.03442622950819672,
+    "pearson": 0.9967988952590132,
+    "spearman": 0.9954673552300297,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand54",
+    "regret": 0.0,
+    "pearson": 0.9949039626969606,
+    "spearman": 0.9927414740215151,
+    "couplings": 16
+   },
+   {
+    "scenario": "rand55",
+    "regret": 0.016516516516516516,
+    "pearson": 0.9926470252641098,
+    "spearman": 0.9894283588921948,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand56",
+    "regret": 0.011764705882352941,
+    "pearson": 0.9895588453085015,
+    "spearman": 0.9871309224078736,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand57",
+    "regret": 0.0,
+    "pearson": 0.9922047513687362,
+    "spearman": 0.9927994106202791,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand58",
+    "regret": 0.0,
+    "pearson": 0.9898718756044559,
+    "spearman": 0.9847462233920804,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand59",
+    "regret": 0.0,
+    "pearson": 0.9901401904655106,
+    "spearman": 0.9901328965438313,
+    "couplings": 24
+   }
+  ]
+ },
+ "local_gibbs": {
+  "mean_regret": 0.00393046462580509,
+  "max_regret": 0.052132701421800945,
+  "frac_le_5pct": 0.9836065573770492,
+  "frac_zero": 0.7540983606557377,
+  "regret_points_of_10": 9.998251884080492,
+  "mean_pearson": 0.9867626096735169,
+  "min_pearson": 0.9648005490977266,
+  "mean_spearman": 0.9904936371754799,
+  "mean_couplings": 23.327868852459016,
+  "R_regret": 0.0,
+  "R_pearson": 0.9912353876480512,
+  "rows": [
+   {
+    "scenario": "R",
+    "regret": 0.0,
+    "pearson": 0.9912353876480512,
+    "spearman": 0.9961497196154725,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand0",
+    "regret": 0.0,
+    "pearson": 0.9937603841667763,
+    "spearman": 0.9973935683222703,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand1",
+    "regret": 0.008771929824561403,
+    "pearson": 0.9865208306901362,
+    "spearman": 0.9900527866788738,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand2",
+    "regret": 0.0,
+    "pearson": 0.9914094830886998,
+    "spearman": 0.9937221046005948,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand3",
+    "regret": 0.0,
+    "pearson": 0.9648005490977266,
+    "spearman": 0.9807457370107574,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand4",
+    "regret": 0.0,
+    "pearson": 0.9950290581501643,
+    "spearman": 0.9958664740215151,
+    "couplings": 12
+   },
+   {
+    "scenario": "rand5",
+    "regret": 0.007462686567164179,
+    "pearson": 0.9935300232240984,
+    "spearman": 0.9923816948958569,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand6",
+    "regret": 0.0,
+    "pearson": 0.9792278619592781,
+    "spearman": 0.9791227969787134,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand7",
+    "regret": 0.052132701421800945,
+    "pearson": 0.9864386779012241,
+    "spearman": 0.993915226596475,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand8",
+    "regret": 0.0,
+    "pearson": 0.9884568580350478,
+    "spearman": 0.9938966296635384,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand9",
+    "regret": 0.0,
+    "pearson": 0.9891279945495257,
+    "spearman": 0.9900027180132752,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand10",
+    "regret": 0.007246376811594203,
+    "pearson": 0.9896016831840292,
+    "spearman": 0.9947134641794461,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand11",
+    "regret": 0.0,
+    "pearson": 0.9929389543417152,
+    "spearman": 0.9946705481803614,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand12",
+    "regret": 0.0,
+    "pearson": 0.9829545151114933,
+    "spearman": 0.9892016193636985,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand13",
+    "regret": 0.0,
+    "pearson": 0.987300388897358,
+    "spearman": 0.9892273689631494,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand14",
+    "regret": 0.0,
+    "pearson": 0.9939000706893872,
+    "spearman": 0.9966089208056761,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand15",
+    "regret": 0.011574074074074073,
+    "pearson": 0.9926678596548849,
+    "spearman": 0.9942928873884183,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand16",
+    "regret": 0.0,
+    "pearson": 0.966686526180697,
+    "spearman": 0.9827499141680017,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand17",
+    "regret": 0.0,
+    "pearson": 0.9789024788675506,
+    "spearman": 0.9819037537193864,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand18",
+    "regret": 0.0,
+    "pearson": 0.9968887340912207,
+    "spearman": 0.9979014076447699,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand19",
+    "regret": 0.006648936170212766,
+    "pearson": 0.9800415503281469,
+    "spearman": 0.9869800011444265,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand20",
+    "regret": 0.0,
+    "pearson": 0.969773423604379,
+    "spearman": 0.9780041199359119,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand21",
+    "regret": 0.0,
+    "pearson": 0.9855547664242962,
+    "spearman": 0.9918209258411534,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand22",
+    "regret": 0.0,
+    "pearson": 0.9944001032078648,
+    "spearman": 0.993323701075761,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand23",
+    "regret": 0.011320754716981131,
+    "pearson": 0.9818898154632036,
+    "spearman": 0.9949831197070267,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand24",
+    "regret": 0.0,
+    "pearson": 0.9904408506733842,
+    "spearman": 0.991920347905699,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand25",
+    "regret": 0.0,
+    "pearson": 0.9782737308591019,
+    "spearman": 0.9925075818265048,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand26",
+    "regret": 0.0,
+    "pearson": 0.989148465405816,
+    "spearman": 0.9900205996795605,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand27",
+    "regret": 0.0,
+    "pearson": 0.9967442622548954,
+    "spearman": 0.9970116159304188,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand28",
+    "regret": 0.0,
+    "pearson": 0.9993334832417929,
+    "spearman": 0.9954952506294346,
+    "couplings": 7
+   },
+   {
+    "scenario": "rand29",
+    "regret": 0.00398406374501992,
+    "pearson": 0.9989245307569742,
+    "spearman": 0.9985651750972762,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand30",
+    "regret": 0.024390243902439025,
+    "pearson": 0.9880534885943779,
+    "spearman": 0.9947957198443577,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand31",
+    "regret": 0.0,
+    "pearson": 0.9849743730278122,
+    "spearman": 0.9903875314717325,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand32",
+    "regret": 0.034653465346534656,
+    "pearson": 0.9927769318722198,
+    "spearman": 0.9956905184252688,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand33",
+    "regret": 0.0,
+    "pearson": 0.9815443684072294,
+    "spearman": 0.9897001602197297,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand34",
+    "regret": 0.0,
+    "pearson": 0.9878587847201661,
+    "spearman": 0.9888053616388187,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand35",
+    "regret": 0.0,
+    "pearson": 0.9819026455930305,
+    "spearman": 0.982747053101396,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand36",
+    "regret": 0.0,
+    "pearson": 0.989655137174195,
+    "spearman": 0.9947821297779811,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand37",
+    "regret": 0.005154639175257732,
+    "pearson": 0.9935668242528367,
+    "spearman": 0.9962083714808879,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand38",
+    "regret": 0.0,
+    "pearson": 0.9861253579748066,
+    "spearman": 0.9905813687342641,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand39",
+    "regret": 0.0,
+    "pearson": 0.9885651738744694,
+    "spearman": 0.988737411306935,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand40",
+    "regret": 0.0,
+    "pearson": 0.9821595099940584,
+    "spearman": 0.9888983463035018,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand41",
+    "regret": 0.015151515151515152,
+    "pearson": 0.988519464458637,
+    "spearman": 0.9931355859464406,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand42",
+    "regret": 0.0,
+    "pearson": 0.9771798290880196,
+    "spearman": 0.9840645742732889,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand43",
+    "regret": 0.0,
+    "pearson": 0.9841199101599833,
+    "spearman": 0.9844622625314714,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand44",
+    "regret": 0.0,
+    "pearson": 0.9935774687039737,
+    "spearman": 0.9944795719844356,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand45",
+    "regret": 0.029333333333333333,
+    "pearson": 0.9874736996439902,
+    "spearman": 0.9854200045777065,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand46",
+    "regret": 0.006060606060606061,
+    "pearson": 0.9921719967529427,
+    "spearman": 0.9940146486610207,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand47",
+    "regret": 0.0,
+    "pearson": 0.9913518905906468,
+    "spearman": 0.9958843556878003,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand48",
+    "regret": 0.0,
+    "pearson": 0.9695968724809716,
+    "spearman": 0.9660892080567635,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand49",
+    "regret": 0.0,
+    "pearson": 0.9798510724418305,
+    "spearman": 0.9804338807507438,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand50",
+    "regret": 0.0,
+    "pearson": 0.980001467433039,
+    "spearman": 0.985550898374914,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand51",
+    "regret": 0.0,
+    "pearson": 0.9865521361022034,
+    "spearman": 0.9906407358663308,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand52",
+    "regret": 0.015873015873015872,
+    "pearson": 0.9844665134620717,
+    "spearman": 0.9909790569924466,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand53",
+    "regret": 0.0,
+    "pearson": 0.995156843651412,
+    "spearman": 0.996136844815747,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand54",
+    "regret": 0.0,
+    "pearson": 0.9887059322035645,
+    "spearman": 0.9929131380178529,
+    "couplings": 16
+   },
+   {
+    "scenario": "rand55",
+    "regret": 0.0,
+    "pearson": 0.9869576604475623,
+    "spearman": 0.9927021343556877,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand56",
+    "regret": 0.0,
+    "pearson": 0.9856723961437965,
+    "spearman": 0.9916950389105056,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand57",
+    "regret": 0.0,
+    "pearson": 0.9843177262850324,
+    "spearman": 0.9902151522087433,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand58",
+    "regret": 0.0,
+    "pearson": 0.986595997219189,
+    "spearman": 0.9850080109864956,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand59",
+    "regret": 0.0,
+    "pearson": 0.9871644155815338,
+    "spearman": 0.9898010128175783,
+    "couplings": 24
+   }
+  ]
+ },
+ "red": {
+  "mean_regret": 0.13812670684665646,
+  "max_regret": 0.7349397590361446,
+  "frac_le_5pct": 0.3770491803278688,
+  "frac_zero": 0.26229508196721313,
+  "regret_points_of_10": 6.297132271283474,
+  "mean_pearson": 0.9279012133791718,
+  "min_pearson": 0.7239190912393805,
+  "mean_spearman": 0.9217057983970521,
+  "mean_couplings": 13.442622950819672,
+  "R_regret": 0.10416666666666667,
+  "R_pearson": 0.9633008057063669,
+  "rows": [
+   {
+    "scenario": "R",
+    "regret": 0.10416666666666667,
+    "pearson": 0.9633008057063669,
+    "spearman": 0.9639362554360263,
+    "couplings": 13
+   },
+   {
+    "scenario": "rand0",
+    "regret": 0.1062992125984252,
+    "pearson": 0.9865038727677334,
+    "spearman": 0.9865143625543601,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand1",
+    "regret": 0.0,
+    "pearson": 0.974713629746615,
+    "spearman": 0.9721689745937283,
+    "couplings": 11
+   },
+   {
+    "scenario": "rand2",
+    "regret": 0.15319148936170213,
+    "pearson": 0.8542000311411029,
+    "spearman": 0.826954823758297,
+    "couplings": 8
+   },
+   {
+    "scenario": "rand3",
+    "regret": 0.08628318584070796,
+    "pearson": 0.7239190912393805,
+    "spearman": 0.7473656729228654,
+    "couplings": 16
+   },
+   {
+    "scenario": "rand4",
+    "regret": 0.0,
+    "pearson": 0.9744797709919649,
+    "spearman": 0.9747653925383382,
+    "couplings": 8
+   },
+   {
+    "scenario": "rand5",
+    "regret": 0.0,
+    "pearson": 0.9631694016523359,
+    "spearman": 0.955555476081483,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand6",
+    "regret": 0.01978021978021978,
+    "pearson": 0.8669621642502254,
+    "spearman": 0.8750858319981687,
+    "couplings": 11
+   },
+   {
+    "scenario": "rand7",
+    "regret": 0.20853080568720378,
+    "pearson": 0.9094173667734636,
+    "spearman": 0.8756022545204852,
+    "couplings": 15
+   },
+   {
+    "scenario": "rand8",
+    "regret": 0.148,
+    "pearson": 0.8639039335719562,
+    "spearman": 0.8922000171663996,
+    "couplings": 24
+   },
+   {
+    "scenario": "rand9",
+    "regret": 0.057692307692307696,
+    "pearson": 0.8755045685319706,
+    "spearman": 0.8736681734950787,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand10",
+    "regret": 0.08695652173913043,
+    "pearson": 0.960138766235425,
+    "spearman": 0.9558058194094756,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand11",
+    "regret": 0.0,
+    "pearson": 0.983679356398445,
+    "spearman": 0.9789067864499884,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand12",
+    "regret": 0.41132075471698115,
+    "pearson": 0.9189020495451096,
+    "spearman": 0.9027079995422291,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand13",
+    "regret": 0.14583333333333334,
+    "pearson": 0.8424681158046902,
+    "spearman": 0.8525878347447927,
+    "couplings": 17
+   },
+   {
+    "scenario": "rand14",
+    "regret": 0.7349397590361446,
+    "pearson": 0.9826996170229978,
+    "spearman": 0.9764391165026319,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand15",
+    "regret": 0.0,
+    "pearson": 0.9102307086019117,
+    "spearman": 0.9343063344014646,
+    "couplings": 17
+   },
+   {
+    "scenario": "rand16",
+    "regret": 0.02877697841726619,
+    "pearson": 0.9290871045333953,
+    "spearman": 0.9092526894026092,
+    "couplings": 11
+   },
+   {
+    "scenario": "rand17",
+    "regret": 0.0,
+    "pearson": 0.9533278716788339,
+    "spearman": 0.9331390192263674,
+    "couplings": 15
+   },
+   {
+    "scenario": "rand18",
+    "regret": 0.0,
+    "pearson": 0.9705073593989173,
+    "spearman": 0.9791270885786219,
+    "couplings": 11
+   },
+   {
+    "scenario": "rand19",
+    "regret": 0.0,
+    "pearson": 0.9607808707859053,
+    "spearman": 0.9607497425040054,
+    "couplings": 8
+   },
+   {
+    "scenario": "rand20",
+    "regret": 0.07727272727272727,
+    "pearson": 0.9273565473302668,
+    "spearman": 0.8856338693064775,
+    "couplings": 12
+   },
+   {
+    "scenario": "rand21",
+    "regret": 0.46113989637305697,
+    "pearson": 0.9661419767940148,
+    "spearman": 0.9654461833371479,
+    "couplings": 16
+   },
+   {
+    "scenario": "rand22",
+    "regret": 0.19536423841059603,
+    "pearson": 0.9599518810947592,
+    "spearman": 0.9504785133897915,
+    "couplings": 13
+   },
+   {
+    "scenario": "rand23",
+    "regret": 0.3320754716981132,
+    "pearson": 0.9243782895378305,
+    "spearman": 0.8658438715953305,
+    "couplings": 18
+   },
+   {
+    "scenario": "rand24",
+    "regret": 0.0,
+    "pearson": 0.9524297532556698,
+    "spearman": 0.9444445239185166,
+    "couplings": 13
+   },
+   {
+    "scenario": "rand25",
+    "regret": 0.0,
+    "pearson": 0.9669482348669765,
+    "spearman": 0.95028968299382,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand26",
+    "regret": 0.34299516908212563,
+    "pearson": 0.938881696306012,
+    "spearman": 0.9385242618448157,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand27",
+    "regret": 0.10367170626349892,
+    "pearson": 0.9903550050349987,
+    "spearman": 0.9915827420462345,
+    "couplings": 11
+   },
+   {
+    "scenario": "rand28",
+    "regret": 0.0,
+    "pearson": 0.9981026894448907,
+    "spearman": 0.9997811284046689,
+    "couplings": 7
+   },
+   {
+    "scenario": "rand29",
+    "regret": 0.013944223107569721,
+    "pearson": 0.986207830821169,
+    "spearman": 0.9837484264133668,
+    "couplings": 12
+   },
+   {
+    "scenario": "rand30",
+    "regret": 0.3902439024390244,
+    "pearson": 0.8945036088394095,
+    "spearman": 0.9004606317235064,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand31",
+    "regret": 0.033816425120772944,
+    "pearson": 0.897755026933347,
+    "spearman": 0.8754062714579993,
+    "couplings": 18
+   },
+   {
+    "scenario": "rand32",
+    "regret": 0.29207920792079206,
+    "pearson": 0.9391103100630305,
+    "spearman": 0.9415655756466009,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand33",
+    "regret": 0.15762273901808785,
+    "pearson": 0.9581849932149793,
+    "spearman": 0.9554317349507895,
+    "couplings": 9
+   },
+   {
+    "scenario": "rand34",
+    "regret": 0.2556818181818182,
+    "pearson": 0.951023546387815,
+    "spearman": 0.9030334458686197,
+    "couplings": 13
+   },
+   {
+    "scenario": "rand35",
+    "regret": 0.1270358306188925,
+    "pearson": 0.8756698845426232,
+    "spearman": 0.8831504634927899,
+    "couplings": 17
+   },
+   {
+    "scenario": "rand36",
+    "regret": 0.2246376811594203,
+    "pearson": 0.9643603421538007,
+    "spearman": 0.9551849679560539,
+    "couplings": 8
+   },
+   {
+    "scenario": "rand37",
+    "regret": 0.0,
+    "pearson": 0.9664209978638645,
+    "spearman": 0.9681506065461202,
+    "couplings": 13
+   },
+   {
+    "scenario": "rand38",
+    "regret": 0.13551401869158877,
+    "pearson": 0.9618421452625006,
+    "spearman": 0.9473957141222247,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand39",
+    "regret": 0.20098039215686275,
+    "pearson": 0.9264366139533514,
+    "spearman": 0.9214472705424581,
+    "couplings": 15
+   },
+   {
+    "scenario": "rand40",
+    "regret": 0.0,
+    "pearson": 0.930006724777053,
+    "spearman": 0.9361395628290224,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand41",
+    "regret": 0.050505050505050504,
+    "pearson": 0.9345641118047111,
+    "spearman": 0.922244077592126,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand42",
+    "regret": 0.03418803418803419,
+    "pearson": 0.885900150594788,
+    "spearman": 0.9074101625085832,
+    "couplings": 15
+   },
+   {
+    "scenario": "rand43",
+    "regret": 0.0,
+    "pearson": 0.8559640381610771,
+    "spearman": 0.8927607862211031,
+    "couplings": 9
+   },
+   {
+    "scenario": "rand44",
+    "regret": 0.0,
+    "pearson": 0.9078823674325741,
+    "spearman": 0.916332398718242,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand45",
+    "regret": 0.15466666666666667,
+    "pearson": 0.9138572903926659,
+    "spearman": 0.8857497425040053,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand46",
+    "regret": 0.051515151515151514,
+    "pearson": 0.921690263046703,
+    "spearman": 0.9152609292744333,
+    "couplings": 9
+   },
+   {
+    "scenario": "rand47",
+    "regret": 0.0821917808219178,
+    "pearson": 0.9432536762077715,
+    "spearman": 0.9413860437170976,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand48",
+    "regret": 0.0,
+    "pearson": 0.892664007341269,
+    "spearman": 0.8809667544060424,
+    "couplings": 20
+   },
+   {
+    "scenario": "rand49",
+    "regret": 0.4680232558139535,
+    "pearson": 0.8347360297490335,
+    "spearman": 0.7835960746166168,
+    "couplings": 21
+   },
+   {
+    "scenario": "rand50",
+    "regret": 0.22556390977443608,
+    "pearson": 0.9009230402107559,
+    "spearman": 0.9042393854428931,
+    "couplings": 12
+   },
+   {
+    "scenario": "rand51",
+    "regret": 0.3262411347517731,
+    "pearson": 0.9351059508021691,
+    "spearman": 0.9133340009155411,
+    "couplings": 22
+   },
+   {
+    "scenario": "rand52",
+    "regret": 0.5396825396825397,
+    "pearson": 0.9082685828016718,
+    "spearman": 0.9086904898146028,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand53",
+    "regret": 0.17868852459016393,
+    "pearson": 0.9595830134957041,
+    "spearman": 0.9691741531242847,
+    "couplings": 11
+   },
+   {
+    "scenario": "rand54",
+    "regret": 0.04895104895104895,
+    "pearson": 0.973605182839579,
+    "spearman": 0.9687435626001373,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand55",
+    "regret": 0.22822822822822822,
+    "pearson": 0.8665971074849196,
+    "spearman": 0.8465688658731974,
+    "couplings": 14
+   },
+   {
+    "scenario": "rand56",
+    "regret": 0.17647058823529413,
+    "pearson": 0.9638248762399393,
+    "spearman": 0.9435175383382924,
+    "couplings": 10
+   },
+   {
+    "scenario": "rand57",
+    "regret": 0.11203319502074689,
+    "pearson": 0.9369988770477674,
+    "spearman": 0.9392280842298006,
+    "couplings": 15
+   },
+   {
+    "scenario": "rand58",
+    "regret": 0.024350649350649352,
+    "pearson": 0.9085859615444547,
+    "spearman": 0.8737654497596702,
+    "couplings": 7
+   },
+   {
+    "scenario": "rand59",
+    "regret": 0.08858267716535433,
+    "pearson": 0.9140049340748034,
+    "spearman": 0.9211060883497366,
+    "couplings": 14
+   }
+  ]
+ }
+}

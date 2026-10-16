@@ -1,0 +1,6 @@
+VAL scenarios: 61; single-approach recursions per scenario (local windows): [176]
+  naive windows (linked B over all 8 bits): 16 + 16 + 16 + 256 = 304; exact windows: 16 + 16 + 16 + 128 = 176
+  repo implementation (approach_costs on 256 joint schedules): 256 x 4 = 1024
+  uniform  projection rebuilt from local tables: max |E_local - E_repo| = 0.00e+00
+  adaptive projection rebuilt from local tables: max |E_local - E_repo| = 0.00e+00
+local decomposition sum_k D_k + switching == scorer cost table on all VAL scenarios: OK

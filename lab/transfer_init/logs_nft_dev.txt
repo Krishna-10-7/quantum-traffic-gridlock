@@ -1,0 +1,8 @@
+ref  field-nft p=4 (ramp + std stage1 40)     lift 0.9788 (min 0.903) enr 19.37 (min 18.74) P(opt) 0.643 f 0.0236 evals<=300 (48s)
+xfer field-nft p=4 (transfer start)           lift 0.9824 (min 0.906) enr 19.46 (min 19.00) P(opt) 0.664 f 0.0199 evals<=299 (41s)
+ref  field-nft p=1 (ramp + std stage1 15)     lift 0.9894 (min 0.911) enr 19.69 (min 19.69) P(opt) 0.617 f 0.0093 evals<=300 (26s)
+xfer field-nft p=1 (transfer start)           lift 0.9857 (min 0.896) enr 19.69 (min 19.69) P(opt) 0.567 f 0.0207 evals<=300 (28s)
+ref  field-nft p=2 (ramp + std stage1 20)     lift 0.9857 (min 0.900) enr 19.54 (min 18.34) P(opt) 0.658 f 0.0129 evals<=300 (30s)
+xfer field-nft p=2 (transfer start)           lift 0.9813 (min 0.842) enr 19.51 (min 19.10) P(opt) 0.630 f 0.0304 evals<=299 (25s)
+ref  field-nft grow 1->4 @150/200/250         lift 0.9837 (min 0.838) enr 19.56 (min 16.26) P(opt) 0.613 f 0.0152 evals<=300 (25s)
+xfer field-nft grow 1->4 @150/200/250         lift 0.9838 (min 0.891) enr 19.65 (min 17.53) P(opt) 0.566 f 0.0227 evals<=300 (25s)

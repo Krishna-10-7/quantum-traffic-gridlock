@@ -1,0 +1,9 @@
+parity {'max_param_diff': 0.0, 'history_lengths': [(300, 300), (300, 300), (300, 300), (300, 300), (300, 300), (300, 300)], 'histories_identical': True}
+budget {'all_simulations_counted': True, 'max_history': 300, 'min_history': 299}
+circuit {'max_abs_prob_diff': 3.9968028886505635e-15, 'n_scenarios': 61}
+seed {'seed': 0, 'identical': True, 'cand_seconds': 0.816460132598877, 'current_seconds': 2.716358184814453, 'cand_lift': np.float64(0.9916021786277602), 'cand_train_seconds': 0.619387149810791, 'current_train_seconds': 2.550184488296509}
+seed {'seed': 1, 'identical': True, 'cand_seconds': 0.8768885135650635, 'current_seconds': 2.7366843223571777, 'cand_lift': np.float64(0.9921274275433754), 'cand_train_seconds': 0.7134132385253906, 'current_train_seconds': 2.5545525550842285}
+seed {'seed': 2, 'identical': True, 'cand_seconds': 1.102402687072754, 'current_seconds': 2.460890769958496, 'cand_lift': np.float64(0.9925648782531545), 'cand_train_seconds': 0.8576788902282715, 'current_train_seconds': 2.2842700481414795}
+seed {'seed': 3, 'identical': True, 'cand_seconds': 0.722315788269043, 'current_seconds': 2.5574400424957275, 'cand_lift': np.float64(0.9922260079850158), 'cand_train_seconds': 0.5860311985015869, 'current_train_seconds': 2.3835368156433105}
+seed {'seed': 4, 'identical': True, 'cand_seconds': 0.9307477474212646, 'current_seconds': 2.4634931087493896, 'cand_lift': np.float64(0.9926157087933754), 'cand_train_seconds': 0.7490851879119873, 'current_train_seconds': 2.3093600273132324}
+runtime {'candidate_mean_seconds_per_seed': 0.8897629737854004, 'current_mean_seconds_per_seed': 2.586973285675049, 'candidate_mean_train_seconds': 0.7051191329956055, 'current_mean_train_seconds': 2.416380786895752}

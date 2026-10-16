@@ -1,0 +1,18 @@
+closed-form pairwise physics vs brute-force finite differences (100 scenarios): max err 0.0e+00
+single-approach 4-slot recursions per analytic QUBO: 176 (A-NS 16 + A-EW 16 + unlinked B 16 + linked B 8 platoons x 16 = 128); joint 8-bit schedules simulated: 0
+
+Surrogate quality on VAL (R + 60 scenarios seed 555)
+rule          mean reg  max reg   <=5%     =0  pts/10  Pearson  Spearman    #J  R reg
+adaptive         0.45%     5.2%  0.984  0.721   10.00   0.9889    0.9922  27.0   0.0%
+webster          0.76%     5.2%  0.984  0.590   10.00   0.9901    0.9902  22.8   0.0%
+uniform          1.08%    11.8%  0.967  0.574    9.89   0.9917    0.9902  22.8   0.0%
+local_gibbs      0.39%     5.2%  0.984  0.754   10.00   0.9868    0.9905  23.3   0.0%
+red             13.81%    73.5%  0.377  0.262    6.30   0.9279    0.9217  13.4  10.4%
+
+Full QAOA pipeline on VAL (p=4 split/qubit, Gibbs eta=2, 300 evals, 4096 shots, seed 0)
+adaptive   R lift 0.8823 R enr 15.56 | mean lift 0.9070 min lift 0.7336 mean enr 16.79 P(opt) 0.343 regret<=5% 0.984
+webster    R lift 0.8877 R enr 15.13 | mean lift 0.9020 min lift 0.7183 mean enr 16.56 P(opt) 0.317 regret<=5% 0.984
+
+Scenario R, sampling seeds 0-4
+adaptive   lift min 0.8732 mean 0.8785 | enr mean 15.36 | P(opt) mean 0.414
+webster    lift min 0.8840 mean 0.8869 | enr mean 15.12 | P(opt) mean 0.465

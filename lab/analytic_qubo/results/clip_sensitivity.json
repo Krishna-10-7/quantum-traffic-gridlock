@@ -1,0 +1,142 @@
+{
+ "tune(seed31,n200)": {
+  "clip=0.15 link=True": {
+   "frac_le_5pct": 0.975,
+   "mean_regret": 0.007473329387030605,
+   "max_regret": 0.4362745098039216,
+   "frac_zero": 0.665,
+   "mean_pearson": 0.9899545476863852
+  },
+  "clip=0.2 link=True": {
+   "frac_le_5pct": 0.98,
+   "mean_regret": 0.005332806511213611,
+   "max_regret": 0.07692307692307693,
+   "frac_zero": 0.67,
+   "mean_pearson": 0.9901774538949948
+  },
+  "clip=0.25 link=True": {
+   "frac_le_5pct": 0.985,
+   "mean_regret": 0.00495835409979922,
+   "max_regret": 0.058823529411764705,
+   "frac_zero": 0.68,
+   "mean_pearson": 0.9904406437658778
+  },
+  "clip=0.3 link=True": {
+   "frac_le_5pct": 0.98,
+   "mean_regret": 0.0056476526716705685,
+   "max_regret": 0.10975609756097561,
+   "frac_zero": 0.665,
+   "mean_pearson": 0.9907618521037207
+  },
+  "clip=0.35 link=True": {
+   "frac_le_5pct": 0.98,
+   "mean_regret": 0.005713696220127424,
+   "max_regret": 0.10975609756097561,
+   "frac_zero": 0.655,
+   "mean_pearson": 0.9911431257387077
+  },
+  "clip=0.4 link=True": {
+   "frac_le_5pct": 0.965,
+   "mean_regret": 0.006743171136503421,
+   "max_regret": 0.10975609756097561,
+   "frac_zero": 0.645,
+   "mean_pearson": 0.9915935002021219
+  },
+  "clip=0.25 link=False": {
+   "frac_le_5pct": 0.97,
+   "mean_regret": 0.0064223794803277825,
+   "max_regret": 0.09111111111111111,
+   "frac_zero": 0.655,
+   "mean_pearson": 0.9903948278433441
+  },
+  "clip=0.5 link=True": {
+   "frac_le_5pct": 0.92,
+   "mean_regret": 0.012491825594529887,
+   "max_regret": 0.1951219512195122,
+   "frac_zero": 0.6,
+   "mean_pearson": 0.9921538428202042
+  },
+  "repo adaptive": {
+   "frac_le_5pct": 0.98,
+   "mean_regret": 0.004308478820979368,
+   "max_regret": 0.10975609756097561,
+   "frac_zero": 0.725
+  },
+  "repo uniform": {
+   "frac_le_5pct": 0.92,
+   "mean_regret": 0.012491825594529887,
+   "max_regret": 0.1951219512195122,
+   "frac_zero": 0.6
+  }
+ },
+ "VAL": {
+  "clip=0.15 link=True": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.007167103741672621,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.6065573770491803,
+   "mean_pearson": 0.9895726296410553
+  },
+  "clip=0.2 link=True": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.007640994052090004,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.5901639344262295,
+   "mean_pearson": 0.9898605556201662
+  },
+  "clip=0.25 link=True": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.007640994052090004,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.5901639344262295,
+   "mean_pearson": 0.9901135227958641
+  },
+  "clip=0.3 link=True": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.007640994052090004,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.5901639344262295,
+   "mean_pearson": 0.9903978418675451
+  },
+  "clip=0.35 link=True": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.007532188016981923,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.5901639344262295,
+   "mean_pearson": 0.9907172585666383
+  },
+  "clip=0.4 link=True": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.00793635592743295,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.5901639344262295,
+   "mean_pearson": 0.9910982076280964
+  },
+  "clip=0.25 link=False": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.0070522060542139026,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.6065573770491803,
+   "mean_pearson": 0.9899066681817242
+  },
+  "clip=0.5 link=True": {
+   "frac_le_5pct": 0.9672131147540983,
+   "mean_regret": 0.010778810547654031,
+   "max_regret": 0.11848341232227488,
+   "frac_zero": 0.5737704918032787,
+   "mean_pearson": 0.9916713372834184
+  },
+  "repo adaptive": {
+   "frac_le_5pct": 0.9836065573770492,
+   "mean_regret": 0.0045227479265262365,
+   "max_regret": 0.052132701421800945,
+   "frac_zero": 0.7213114754098361
+  },
+  "repo uniform": {
+   "frac_le_5pct": 0.9672131147540983,
+   "mean_regret": 0.010778810547654031,
+   "max_regret": 0.11848341232227488,
+   "frac_zero": 0.5737704918032787
+  }
+ }
+}

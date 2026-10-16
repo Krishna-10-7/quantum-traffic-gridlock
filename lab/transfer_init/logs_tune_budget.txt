@@ -1,0 +1,6 @@
+transfer, budget 1 (zero-shot, no training)   lift 0.8292 (min 0.647) enr 13.92 (min 6.95) P(opt) 0.184 f 0.3604 evals 1 (10s)
+transfer, budget 50                           lift 0.8809 (min 0.709) enr 15.99 (min 8.71) P(opt) 0.263 f 0.2442 evals 50 (18s)
+transfer, budget 100                          lift 0.9074 (min 0.761) enr 16.88 (min 9.87) P(opt) 0.325 f 0.1903 evals 100 (36s)
+transfer, budget 200                          lift 0.9347 (min 0.819) enr 17.83 (min 9.09) P(opt) 0.404 f 0.1312 evals 200 (64s)
+ramp, budget 100                              lift 0.8165 (min 0.665) enr 12.72 (min 5.91) P(opt) 0.146 f 0.4246 evals 100 (33s)
+ramp, budget 200                              lift 0.8770 (min 0.730) enr 15.38 (min 7.77) P(opt) 0.246 f 0.2721 evals 200 (82s)

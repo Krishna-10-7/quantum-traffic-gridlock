@@ -1,0 +1,14 @@
+learning field_qubit_p1_eta2
+    [field_qubit_p1_eta2] start ramp0.5            -> mean objective 0.95079
+    [field_qubit_p1_eta2] start ramp0.75           -> mean objective 0.95079
+    [field_qubit_p1_eta2] start ramp1.0            -> mean objective 0.95079
+    [field_qubit_p1_eta2] start ramp1.25           -> mean objective 0.95079
+    [field_qubit_p1_eta2] start ramp1.5            -> mean objective 0.95079
+  [field_qubit_p1_eta2] mean objective 0.95079 from ramp1.5 (19s)
+learning field_qubit_p2_eta2
+    [field_qubit_p2_eta2] start ramp0.5            -> mean objective 0.61294
+    [field_qubit_p2_eta2] start ramp0.75           -> mean objective 0.61294
+    [field_qubit_p2_eta2] start ramp1.0            -> mean objective 0.61294
+    [field_qubit_p2_eta2] start ramp1.25           -> mean objective 0.61294
+    [field_qubit_p2_eta2] start ramp1.5            -> mean objective 0.61294
+  [field_qubit_p2_eta2] mean objective 0.61294 from ramp0.5 (136s)
