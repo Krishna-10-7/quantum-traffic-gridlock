@@ -86,6 +86,8 @@ That is 68 parameters. Standard QAOA is the tied-angle special case. The circuit
 
 (6) **Raw QAOA:** E_Q = 72.41–72.52, lift **0.993 / 0.994** (min / mean over 5 seeds), enrichment **19.52** (maximum 19.69), with **98.5–98.7 %** of all shots on the optimum. The decoded schedule is 72.0 on every seed. (7) Hybrid: 72.0.
 
+**Scenario H** (C\* = 234.0, C_rand = 300.28; link NS, f = 0.7, c = 4), seeds 0–4, run unmodified. Baselines: alternating `10100101` 261.0 · greedy `10100111` 244.0 · exact `10000111` **234.0** · random 300.28 · QUBO minimizer 236.0 (regret 0.85 %). Raw QAOA: E_Q = 236.60–236.73, lift **0.959 / 0.960** (min / mean), enrichment **19.36**. Decoded schedule `10010110` = 236.0, the second-best schedule (the shots concentrate on the QUBO minimizer). The labelled hybrid reaches 234.0.
+
 **Held-out generalization** (100 unseen scenarios, seed 2026, frozen settings):
 
 - lift: mean **0.979**, median 0.988, min 0.819;

@@ -1,0 +1,106 @@
+{
+  "scenario": "H",
+  "seed": 3,
+  "config": {
+    "p": 4,
+    "cost_mode": "field",
+    "mixer_mode": "qubit",
+    "kind": "gibbs",
+    "eta": 2.0,
+    "measure": "webster",
+    "kappa": 1.0,
+    "stage1_evals": 13,
+    "ramp_dts": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "init": "ramp",
+    "max_evals": 300,
+    "trainer": "nft",
+    "gen_evals": 16
+  },
+  "baselines": {
+    "1_best_alternating": {
+      "bits": "10100101",
+      "cost": 261.0,
+      "all": {
+        "10101010": 284.0,
+        "10100101": 261.0,
+        "01011010": 291.0,
+        "01010101": 278.0
+      }
+    },
+    "2_greedy_larger_queue": {
+      "bits": "10100111",
+      "cost": 244.0
+    },
+    "3_exact_enumeration": {
+      "bits": "10000111",
+      "cost": 234.0
+    },
+    "4_uniform_random_expected_cost": 300.28125,
+    "5_qubo_exact_minimizer": {
+      "bits": "10010110",
+      "cost": 236.0,
+      "qubo_energy": 232.36481838340555
+    },
+    "6_qaoa_raw_samples": {
+      "shots": 4096,
+      "E_Q": 236.64404296875,
+      "C_star": 234.0,
+      "C_rand": 300.28125,
+      "lift": 0.9601087340876945,
+      "elite_fraction": 0.983642578125,
+      "enrichment": 19.370192307692307,
+      "p_optimal": 0.0,
+      "best_sampled": {
+        "bits": "10010110",
+        "cost": 236.0
+      },
+      "distinct_bitstrings": 22
+    },
+    "7_hybrid_labelled": {
+      "bits": "10000111",
+      "cost": 234.0,
+      "official_cost_evaluations": 280,
+      "label": "HYBRID (QAOA samples + classical 1-flip descent); not raw QAOA"
+    }
+  },
+  "surrogate": {
+    "regret_abs": 2.0,
+    "regret_rel": 0.008547008547008548,
+    "pearson_qubo_vs_official": 0.9921796203249833,
+    "spearman_qubo_vs_official": 0.9880357347219042
+  },
+  "qaoa_exact_distribution": {
+    "E_Q": 236.65196831723486,
+    "lift": 0.9599891625876872,
+    "enrichment": 19.364549452593057,
+    "p_optimal": 5.2227038554389265e-08
+  },
+  "circuit": {
+    "qubits": 8,
+    "depth": 46,
+    "ops": {
+      "rzz": 96,
+      "rz": 32,
+      "rx": 32,
+      "h": 8,
+      "measure": 8,
+      "barrier": 1
+    },
+    "p": 4,
+    "n_parameters": 68,
+    "max_abs_prob_diff_circuit_vs_trainer": 2.220446049250313e-16
+  },
+  "training": {
+    "objective_evaluations": 300,
+    "final_objective": 0.014551409160716858
+  },
+  "runtime_seconds": {
+    "qubo": 0.004019260406494141,
+    "train": 0.43503546714782715,
+    "total": 0.517080545425415
+  }
+}

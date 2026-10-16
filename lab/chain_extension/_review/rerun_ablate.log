@@ -1,5 +1,0 @@
-standard ansatz {'mean_lift': 0.7984715450879742, 'min_lift': 0.6986144386857032, 'mean_enrich': 16.02037545787546, 'regret_le_5': 0.9047619047619048, 'mean_rzz': 246.47619047619048, 'evals': [300]}
-adaptive, light-cone sparse {'mean_lift': 0.8706245632736405, 'min_lift': 0.7609854487825962, 'mean_enrich': 17.857142857142858, 'regret_le_5': 0.9047619047619048, 'mean_rzz': 178.0952380952381, 'evals': [300]}
-kappa=0.5 {'mean_lift': 0.8738769858838599, 'min_lift': 0.7510235414534289, 'mean_enrich': 17.94826007326007, 'regret_le_5': 1.0, 'mean_rzz': 246.47619047619048, 'evals': [300]}
-uniform mu (local) {'mean_lift': 0.86375046279992, 'min_lift': 0.7088804513426014, 'mean_enrich': 17.59500915750916, 'regret_le_5': 0.8095238095238095, 'mean_rzz': 161.9047619047619, 'evals': [300]}
-p=1 {'mean_lift': 0.702522960175635, 'min_lift': 0.48216399053224157, 'mean_enrich': 12.570741758241757, 'regret_le_5': 0.9047619047619048, 'mean_rzz': 61.61904761904762, 'evals': [300]}

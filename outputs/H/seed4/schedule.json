@@ -1,0 +1,36 @@
+{
+  "bit_order": "A_slot1 A_slot2 A_slot3 A_slot4 B_slot1 B_slot2 B_slot3 B_slot4; 1 = NS green, 0 = EW green",
+  "counts_key_order": "identical to bit_order (schedule bit i is measured on qubit/clbit 7-i, so Qiskit keys read A1..B4)",
+  "schedule": "10010110",
+  "selection_rule": "raw QAOA: lowest QUBO energy among the 4096 sampled bitstrings (official scorer not used)",
+  "A": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "B": [
+    0,
+    1,
+    1,
+    0
+  ],
+  "official_cost": 236.0,
+  "alternatives": {
+    "qaoa_most_frequent": {
+      "bits": "10010110",
+      "shots": 4018,
+      "official_cost": 236.0
+    },
+    "qubo_exact_minimizer": {
+      "bits": "10010110",
+      "official_cost": 236.0
+    },
+    "hybrid_labelled": {
+      "bits": "10000111",
+      "cost": 234.0,
+      "official_cost_evaluations": 296,
+      "label": "HYBRID (QAOA samples + classical 1-flip descent); not raw QAOA"
+    }
+  }
+}

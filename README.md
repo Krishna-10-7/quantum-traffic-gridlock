@@ -34,7 +34,7 @@ identical to `scorer.py`. Schedule bit *i* is placed on qubit *7−i* and measur
 ```bash
 python tests/test_pipeline.py                                               # 9 verification tests
 python experiments/benchmark.py seeds --scenario scenarios/scenario_R.json --out outputs/R   # 5 seeds -> robustness.md
-python experiments/benchmark.py seeds --scenario scenarios/scenario_H.json --out outputs/H   # when H is released
+python experiments/benchmark.py seeds --scenario scenarios/scenario_H.json --out outputs/H
 python experiments/benchmark.py generalization --n 100 --gen-seed 2026      # results/generalization.json
 python experiments/benchmark.py ablations --n 40 --gen-seed 99              # results/ablations.md
 python experiments/noise.py                                                 # results/noise.md (extension)
@@ -43,14 +43,15 @@ python experiments/figures.py                                               # fi
 
 ## Headline results
 
-| | Scenario R (5 seeds) | 100 unseen random scenarios (hidden ranges) |
-|---|---|---|
-| QAOA raw lift | **0.993 min / 0.994 mean** | 0.979 mean, 0.819 min |
-| Elite-13 enrichment (random = 1, max 19.69) | **19.52** | 19.28 |
-| Shots on the exact optimum | 98.5 % | 60 % mean |
-| Decoded schedule | `11101010`, cost **72.0 = C\*** | optimal in 62 %, mean excess 0.61 % |
-| Surrogate regret (QUBO minimizer) | 0 % | ≤ 5 % in 97 % of scenarios |
+| | Scenario R (5 seeds) | Scenario H (5 seeds) | 100 unseen random scenarios (hidden ranges) |
+|---|---|---|---|
+| QAOA raw lift | **0.993 min / 0.994 mean** | **0.959 min / 0.960 mean** | 0.979 mean, 0.819 min |
+| Elite-13 enrichment (random = 1, max 19.69) | **19.52** | **19.36** | 19.28 |
+| Shots on the exact optimum | 98.5 % | 0 % (shots on 2nd-best, cost 236) | 60 % mean |
+| Decoded schedule | `11101010`, cost **72.0 = C\*** | `10010110`, 236.0 (C\* = 234.0) | optimal in 62 %, mean excess 0.61 % |
+| Surrogate regret (QUBO minimizer) | 0 % | 0.85 % | ≤ 5 % in 97 % of scenarios |
 
+Scenario H baselines: alternating 261.0 · greedy 244.0 · uniform random 300.28 · exact C\* 234.0 · QUBO minimizer 236.0 · hybrid 234.0.
 Scenario R baselines: alternating 116.0 · greedy 92.5 · uniform random 151.25 · exact C\* 72.0 · QUBO minimizer 72.0.
 
 **Method in one line:** closed-form QUBO, i.e. the second-order expansion of each approach's exact queue recursion at the
@@ -73,5 +74,5 @@ experiments/         seeds, generalization, ablations, noise extension, figures,
 lab/                 research tracks with their own scripts + RESULTS.md: analytic_qubo, optimizer_ansatz (NFT),
                      transfer_init, chain_extension (A->B->C, 12 qubits), shots_hardware (shot training, heavy-hex)
 tests/               independent verification
-REPORT.md            technical report (≤ 3 pages)      AI_DISCLOSURE.md  AI-use disclosure
+REPORT.md / REPORT.pdf   technical report (≤ 3 pages)      AI_DISCLOSURE.pdf  disclosure (1 page)
 ```
