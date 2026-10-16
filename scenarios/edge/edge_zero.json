@@ -1,0 +1,43 @@
+{
+ "name": "edge_zero",
+ "arrivals": {
+  "A": {
+   "NS": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "EW": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "B": {
+   "NS": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "EW": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "service_capacity": 5,
+ "storage_capacity": 7,
+ "overflow_weight": 4,
+ "switch_weight": 0.5,
+ "link": {
+  "from": "A",
+  "to": "B",
+  "phase": "EW",
+  "fraction": 0.6
+ }
+}

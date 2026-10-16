@@ -1,0 +1,8 @@
+# core pipeline (run.py) - CPU only, no network
+qiskit>=2.0,<3
+numpy>=1.24
+scipy>=1.10
+# verification / experiments only (not needed by run.py)
+qiskit_qasm3_import>=0.5   # tests: OpenQASM 3 round trip
+qiskit-aer>=0.15           # experiments/noise.py
+matplotlib>=3.7            # experiments/figures.py

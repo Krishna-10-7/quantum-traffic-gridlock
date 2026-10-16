@@ -1,0 +1,43 @@
+{
+ "name": "edge_max",
+ "arrivals": {
+  "A": {
+   "NS": [
+    8,
+    8,
+    8,
+    8
+   ],
+   "EW": [
+    8,
+    8,
+    8,
+    8
+   ]
+  },
+  "B": {
+   "NS": [
+    8,
+    8,
+    8,
+    8
+   ],
+   "EW": [
+    8,
+    8,
+    8,
+    8
+   ]
+  }
+ },
+ "service_capacity": 4,
+ "storage_capacity": 5,
+ "overflow_weight": 6,
+ "switch_weight": 1.5,
+ "link": {
+  "from": "A",
+  "to": "B",
+  "phase": "NS",
+  "fraction": 0.8
+ }
+}
